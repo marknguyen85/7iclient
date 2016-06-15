@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{6823A810-E391-43B9-91E0-F100324785E0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Sync7i.Mobile.BusinessEntities</RootNamespace>
+    <AssemblyName>Sync7i.Mobile.BusinessEntities</AssemblyName>
+    <TargetFrameworkProfile>Profile259</TargetFrameworkProfile>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Address.cs" />
+    <Compile Include="BanLe.cs" />
+    <Compile Include="BanLeCT.cs" />
+    <Compile Include="BanSiTT.cs" />
+    <Compile Include="BDDoanhThu.cs" />
+    <Compile Include="ChienDich.cs" />
+    <Compile Include="Connector\Picture.gen.cs" />
+    <Compile Include="Customer.cs" />
+    <Compile Include="DMSanPham.cs" />
+    <Compile Include="Enums\DateType.cs" />
+    <Compile Include="Enums\TrangThaiCongNo.cs" />
+    <Compile Include="Enums\TrangThaiTamUng.cs" />
+    <Compile Include="Enums\TrangThaiXK.cs" />
+    <Compile Include="Gen\AppConfig.gen.cs" />
+    <Compile Include="Gen\BanLe.gen.cs" />
+    <Compile Include="Gen\BanLeCT.gen.cs" />
+    <Compile Include="Gen\BanSiTT.gen.cs" />
+    <Compile Include="Gen\ChienDich.gen.cs" />
+    <Compile Include="Gen\ChienDichCT.gen.cs" />
+    <Compile Include="Gen\ChiPhi.gen.cs" />
+    <Compile Include="Gen\ComGroupStore.gen.cs" />
+    <Compile Include="Gen\ComLocationStore.gen.cs" />
+    <Compile Include="Gen\Companies.gen.cs" />
+    <Compile Include="Gen\Contacts.gen.cs" />
+    <Compile Include="Gen\DMSanPham.gen.cs" />
+    <Compile Include="Gen\DMSanPhamPrice.gen.cs" />
+    <Compile Include="Gen\IPAccess.gen.cs" />
+    <Compile Include="Gen\LogError.gen.cs" />
+    <Compile Include="Gen\MacAddressDevices.gen.cs" />
+    <Compile Include="Gen\MacAddressStore.gen.cs" />
+    <Compile Include="Gen\NhanVien.gen.cs" />
+    <Compile Include="Gen\NhapHang.gen.cs" />
+    <Compile Include="Gen\NhapHangCT.gen.cs" />
+    <Compile Include="Gen\NhapHangTT.gen.cs" />
+    <Compile Include="Gen\Order.gen.cs" />
+    <Compile Include="Gen\OrderItem.gen.cs" />
+    <Compile Include="Gen\RecycleBinMap.gen.cs" />
+    <Compile Include="Gen\TamUng.gen.cs" />
+    <Compile Include="Gen\ThuKhac.gen.cs" />
+    <Compile Include="Gen\TienMat.gen.cs" />
+    <Compile Include="Gen\TonThuc.gen.cs" />
+    <Compile Include="Gen\UsersInCompanies.gen.cs" />
+    <Compile Include="Gen\UsersInStores.gen.cs" />
+    <Compile Include="Para\BaseInput.cs" />
+    <Compile Include="Para\IDPara.cs" />
+    <Compile Include="Para\PagedPara.cs" />
+    <Compile Include="Para\TienMatPara.cs" />
+    <Compile Include="NhapHang.cs" />
+    <Compile Include="Order.cs" />
+    <Compile Include="OrderItem.cs" />
+    <Compile Include="OverView.cs" />
+    <Compile Include="Picture.cs" />
+    <Compile Include="Product.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TienMat.cs" />
+    <Compile Include="UserAuthenStatus.cs" />
+    <Compile Include="UserAuthen.cs" />
+    <Compile Include="UsersInCompanies.cs" />
+    <Compile Include="UsersInStores.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\UG.Mobile.Framework\UG.Mobile.Framework.csproj">
+      <Project>{8B4044B2-C9AD-4E2F-90EA-420F7A46D6B3}</Project>
+      <Name>UG.Mobile.Framework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <Import Project="..\packages\Xamarin.Forms.1.3.3.6323\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.1.3.3.6323\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />
+</Project>

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:local="http://schemas.android.com/apk/res-auto">
+
+    <group android:id="@+id/nav_items">
+        <item
+            android:id="@+id/nav_home"
+            android:title="Trang chủ" />        
+    </group>
+
+    <item android:title="Chức năng">
+        <menu>
+       		<item
+	            android:id="@+id/nav_giamsat"
+	            android:title="Giá sát" />
+            <item
+	            android:id="@+id/nav_cuahang"
+	            android:title="Cửa hàng" />
+            <item
+	            android:id="@+id/nav_congno"
+	            android:title="Công nợ" />
+            <item
+	            android:id="@+id/nav_kehoach"
+	            android:title="Kế hoạch" />
+        </menu>
+    </item>
+	<group android:id="@+id/nav_footer">
+        <item
+            android:id="@+id/nav_settings"
+            android:title="Cấu hình" />
+    </group>
+
+</menu>
