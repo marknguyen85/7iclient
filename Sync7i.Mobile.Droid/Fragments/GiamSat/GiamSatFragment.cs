@@ -7,7 +7,7 @@ using Sync7i.Mobile.Share;
 namespace Sync7i.Mobile.Droid.Fragments
 {
     [MvxFragment(typeof(MainViewModel), Resource.Id.content_frame)]
-    [Register("sync7i.mobile.droid.fragments.SettingsFragment")]
+    [Register("sync7i.mobile.droid.fragments.GiamSatFragment")]
     public class GiamSatFragment : BaseNestedView<GiamSatViewModel>
     {
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)

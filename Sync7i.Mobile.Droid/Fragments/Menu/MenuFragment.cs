@@ -81,9 +81,6 @@ namespace Sync7i.Mobile.Droid.Fragments
 				case Resource.Id.nav_kehoach:
 					ViewModel.PlanCommand.Execute();
 					break;
-				case Resource.Id.nav_help:
-					ViewModel.HelpCommand.Execute();
-					break;
 				case Resource.Id.nav_settings:
 					ViewModel.SettingsCommand.Execute();
 					break;

@@ -7,8 +7,8 @@ using Sync7i.Mobile.Share;
 namespace Sync7i.Mobile.Droid.Fragments
 {
     [MvxFragment(typeof(MainViewModel), Resource.Id.content_frame)]
-    [Register("sync7i.mobile.droid.fragments.SettingsFragment")]
-    public class CuaHangFragment : BaseNestedView<CuaHangViewModel>
+    [Register("sync7i.mobile.droid.fragments.CuaHangFragment")]
+	public class CuaHangFragment : BaseNestedView<LocationStoreViewModel>
     {
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {

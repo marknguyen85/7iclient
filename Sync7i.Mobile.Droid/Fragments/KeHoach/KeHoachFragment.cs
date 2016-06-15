@@ -7,8 +7,8 @@ using Sync7i.Mobile.Share;
 namespace Sync7i.Mobile.Droid.Fragments
 {
     [MvxFragment(typeof(MainViewModel), Resource.Id.content_frame)]
-    [Register("sync7i.mobile.droid.fragments.SettingsFragment")]
-    public class SettingsFragment : BaseNestedView<SettingsViewModel>
+    [Register("sync7i.mobile.droid.fragments.KeHoachFragment")]
+    public class KeHoachFragment : BaseNestedView<NhapHangPlanViewModel>
     {
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
@@ -20,7 +20,7 @@ namespace Sync7i.Mobile.Droid.Fragments
         {
             get
             {
-				return Resource.Layout.fragment_settings;
+				return Resource.Layout.fragment_kehoach;
             }
         }
     }
