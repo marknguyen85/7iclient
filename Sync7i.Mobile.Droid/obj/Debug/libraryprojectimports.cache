@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Paths>
+  <Jars></Jars>
+  <ResolvedResourceDirectories>
+    <ResolvedResourceDirectory>E:\MyProjects\UG\marknguyen85\7iclient\Sync7i.Mobile.Droid\obj\Debug\__library_projects__\MvvmCross.Binding.Droid\library_project_imports\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>E:\MyProjects\UG\marknguyen85\7iclient\Sync7i.Mobile.Droid\obj\Debug\__library_projects__\MvvmCross.Droid\library_project_imports\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>E:\MyProjects\UG\marknguyen85\7iclient\Sync7i.Mobile.Droid\obj\Debug\__library_projects__\MvvmCross.Droid.Shared\library_project_imports\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>E:\MyProjects\UG\marknguyen85\7iclient\Sync7i.Mobile.Droid\obj\Debug\__library_projects__\MvvmCross.Droid.Support.V4\library_project_imports\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>E:\MyProjects\UG\marknguyen85\7iclient\Sync7i.Mobile.Droid\obj\Debug\__library_projects__\MvvmCross.Droid.Support.V7.AppCompat\library_project_imports\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>E:\MyProjects\UG\marknguyen85\7iclient\Sync7i.Mobile.Droid\obj\Debug\__library_projects__\MvvmCross.Droid.Support.V7.RecyclerView\library_project_imports\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>E:\MyProjects\UG\marknguyen85\7iclient\Sync7i.Mobile.Droid\obj\Debug\__library_projects__\MvvmCross.Platform.Droid\library_project_imports\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>E:\MyProjects\UG\marknguyen85\7iclient\Sync7i.Mobile.Droid\obj\Debug\__library_projects__\MvvmCross.Plugins.Visibility.Droid\library_project_imports\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>E:\MyProjects\UG\marknguyen85\7iclient\Sync7i.Mobile.Droid\obj\Debug\__library_projects__\PCLCrypto\library_project_imports\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>E:\MyProjects\UG\marknguyen85\7iclient\Sync7i.Mobile.Droid\obj\Debug\__library_projects__\Plugin.Settings\library_project_imports\res</ResolvedResourceDirectory>
+  </ResolvedResourceDirectories>
+  <ResolvedAssetDirectories>
+    <ResolvedAssetDirectory>E:\MyProjects\UG\marknguyen85\7iclient\Sync7i.Mobile.Droid\obj\Debug\__library_projects__\MvvmCross.Binding.Droid\library_project_imports\assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>E:\MyProjects\UG\marknguyen85\7iclient\Sync7i.Mobile.Droid\obj\Debug\__library_projects__\MvvmCross.Droid\library_project_imports\assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>E:\MyProjects\UG\marknguyen85\7iclient\Sync7i.Mobile.Droid\obj\Debug\__library_projects__\MvvmCross.Droid.Shared\library_project_imports\assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>E:\MyProjects\UG\marknguyen85\7iclient\Sync7i.Mobile.Droid\obj\Debug\__library_projects__\MvvmCross.Droid.Support.V4\library_project_imports\assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>E:\MyProjects\UG\marknguyen85\7iclient\Sync7i.Mobile.Droid\obj\Debug\__library_projects__\MvvmCross.Droid.Support.V7.AppCompat\library_project_imports\assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>E:\MyProjects\UG\marknguyen85\7iclient\Sync7i.Mobile.Droid\obj\Debug\__library_projects__\MvvmCross.Droid.Support.V7.RecyclerView\library_project_imports\assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>E:\MyProjects\UG\marknguyen85\7iclient\Sync7i.Mobile.Droid\obj\Debug\__library_projects__\MvvmCross.Platform.Droid\library_project_imports\assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>E:\MyProjects\UG\marknguyen85\7iclient\Sync7i.Mobile.Droid\obj\Debug\__library_projects__\MvvmCross.Plugins.Visibility.Droid\library_project_imports\assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>E:\MyProjects\UG\marknguyen85\7iclient\Sync7i.Mobile.Droid\obj\Debug\__library_projects__\PCLCrypto\library_project_imports\assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>E:\MyProjects\UG\marknguyen85\7iclient\Sync7i.Mobile.Droid\obj\Debug\__library_projects__\Plugin.Settings\library_project_imports\assets</ResolvedAssetDirectory>
+  </ResolvedAssetDirectories>
+  <ResolvedEnvironmentFiles />
+  <ResolvedResourceDirectoryStamps>
+    <ResolvedResourceDirectoryStamp>E:\MyProjects\UG\marknguyen85\7iclient\Sync7i.Mobile.Droid\obj\Debug\__library_projects__\MvvmCross.Binding.Droid.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>E:\MyProjects\UG\marknguyen85\7iclient\Sync7i.Mobile.Droid\obj\Debug\__library_projects__\MvvmCross.Droid.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>E:\MyProjects\UG\marknguyen85\7iclient\Sync7i.Mobile.Droid\obj\Debug\__library_projects__\MvvmCross.Droid.Shared.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>E:\MyProjects\UG\marknguyen85\7iclient\Sync7i.Mobile.Droid\obj\Debug\__library_projects__\MvvmCross.Droid.Support.V4.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>E:\MyProjects\UG\marknguyen85\7iclient\Sync7i.Mobile.Droid\obj\Debug\__library_projects__\MvvmCross.Droid.Support.V7.AppCompat.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>E:\MyProjects\UG\marknguyen85\7iclient\Sync7i.Mobile.Droid\obj\Debug\__library_projects__\MvvmCross.Droid.Support.V7.RecyclerView.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>E:\MyProjects\UG\marknguyen85\7iclient\Sync7i.Mobile.Droid\obj\Debug\__library_projects__\MvvmCross.Platform.Droid.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>E:\MyProjects\UG\marknguyen85\7iclient\Sync7i.Mobile.Droid\obj\Debug\__library_projects__\MvvmCross.Plugins.Visibility.Droid.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>E:\MyProjects\UG\marknguyen85\7iclient\Sync7i.Mobile.Droid\obj\Debug\__library_projects__\PCLCrypto.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>E:\MyProjects\UG\marknguyen85\7iclient\Sync7i.Mobile.Droid\obj\Debug\__library_projects__\Plugin.Settings.stamp</ResolvedResourceDirectoryStamp>
+  </ResolvedResourceDirectoryStamps>
+</Paths>
