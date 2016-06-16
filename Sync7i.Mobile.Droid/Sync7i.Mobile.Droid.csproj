@@ -182,6 +182,7 @@
     <AndroidResource Include="Resources\layout\fragment_cuahang.axml" />
     <AndroidResource Include="Resources\layout\fragment_congno.axml" />
     <AndroidResource Include="Resources\layout\fragment_kehoach.axml" />
+    <AndroidResource Include="Resources\layout\home_item.axml" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -12,7 +12,7 @@ xmlns:local="http://schemas.android.com/apk/res-auto">
         <menu>
        		<item
 	            android:id="@+id/nav_giamsat"
-	            android:title="Giá sát" />
+	            android:title="Giám sát" />
             <item
 	            android:id="@+id/nav_cuahang"
 	            android:title="Cửa hàng" />

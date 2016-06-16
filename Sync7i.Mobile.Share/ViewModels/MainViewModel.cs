@@ -4,7 +4,7 @@
     {
         public void ShowMenu()
         {
-			ShowViewModel<SettingsViewModel>();
+			ShowViewModel<OverviewViewModel>();
             ShowViewModel<MenuViewModel>();            
         }
 

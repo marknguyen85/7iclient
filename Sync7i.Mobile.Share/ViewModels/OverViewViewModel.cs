@@ -5,11 +5,39 @@ using System;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 using MvvmCross.Core.ViewModels;
+using System.Collections.ObjectModel;
 
 namespace Sync7i.Mobile.Share
 {
+	public class OverViewItem { 
+		public string Name { get; set; }
+		public decimal Value { get; set; }
+	}
     public partial class OverviewViewModel : ReportBaseViewModel<OverviewModel>
-	{		
+	{
+		public OverviewViewModel()
+		{
+			ListItem.Add(new OverViewItem
+			{
+				Name = "Bán lẻ",
+				Value = Model.BanLe
+			});
+		}
+		private ObservableCollection<OverViewItem> _listItem;
+
+		public ObservableCollection<OverViewItem> ListItem
+		{
+			get
+			{
+				return _listItem;
+			}
+			set
+			{
+				SetProperty(ref _listItem, value);
+				RaisePropertyChanged(() => ListItem);
+			}
+		}
+
 		public override async void OnCreate ()
 		{
 			base.OnCreate ();
