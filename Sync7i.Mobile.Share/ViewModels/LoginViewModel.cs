@@ -75,8 +75,6 @@ namespace Sync7i.Mobile.Share
 
 		private async void DoLogin ()
 		{
-			ShowHomePage();
-			return;
 			IsBusy = true;
 			if (!_NService.IsNetworkAvailable ()) {
 				UXHandler.DisplayAlert ("Network Error", "No network available!", AlertButton.OK);

@@ -15,14 +15,6 @@ namespace Sync7i.Mobile.Share
 	}
     public partial class OverviewViewModel : ReportBaseViewModel<OverviewModel>
 	{
-		public OverviewViewModel()
-		{
-			ListItem.Add(new OverViewItem
-			{
-				Name = "Bán lẻ",
-				Value = Model.BanLe
-			});
-		}
 		private ObservableCollection<OverViewItem> _listItem;
 
 		public ObservableCollection<OverViewItem> ListItem
@@ -46,6 +38,11 @@ namespace Sync7i.Mobile.Share
             {
                 var para = CurrentPara();
                 Model = OverviewModel.Map(await OverViewBiz.Instance.Get(para));
+				ListItem.Add(new OverViewItem
+				{
+					Name = "Bán lẻ",
+					Value = Model.BanLe
+				});
             }
             catch (Exception ex)
             {

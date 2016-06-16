@@ -9,7 +9,7 @@ namespace UG.Mobile.Framework
 {
     public class AESEngine
     {
-        public static string CreateSalt(uint lengthInBytes=16)
+        public static string CreateSalt(int lengthInBytes=16)
         {
             var salt = WinRTCrypto.CryptographicBuffer.GenerateRandom(lengthInBytes);
             return Convert.ToBase64String(salt);

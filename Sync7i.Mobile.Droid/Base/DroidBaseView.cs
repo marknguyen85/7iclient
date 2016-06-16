@@ -131,12 +131,20 @@ namespace Sync7i.Mobile.Droid
 			RetainInstance = true;
 		}
 
+		public override void OnAttach(Context context)
+		{
+			if (ViewModel != null)
+			{
+				((BaseViewModel)this.ViewModel).OnDetach();
+			}
+			base.OnAttach(context);
+		}
+
 		public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
 		{
 			var ignore = base.OnCreateView(inflater, container, savedInstanceState);
 
 			var view = this.BindingInflate(FragmentId, null);
-
 			_toolbar = view.FindViewById<Toolbar>(Resource.Id.toolbar);
 			if (_toolbar != null)
 			{
@@ -159,6 +167,12 @@ namespace Sync7i.Mobile.Droid
 					((MainActivity)Activity).DrawerLayout.AddDrawerListener(_drawerToggle);
 				}
 			}
+
+			if (ViewModel != null)
+			{
+				((BaseViewModel)this.ViewModel).OnCreate();
+			}
+
 			return view;
 		}
 

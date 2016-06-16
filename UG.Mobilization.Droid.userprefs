@@ -1,13 +1,30 @@
-﻿<Properties StartupItem="Sync7i.Mobile.Droid\Sync7i.Mobile.Droid.csproj">
+﻿<Properties NuGet.AddPackagesDialog.IncludePrerelease="True" StartupItem="Sync7i.Mobile.Droid\Sync7i.Mobile.Droid.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="E:\MyProjects\UG\marknguyen85\7iclient\Sync7i.Mobile.Share\ViewModels\OverViewViewModel.cs" line="35" column="1" />
+      <Breakpoint file="E:\MyProjects\UG\marknguyen85\7iclient\Sync7i.Mobile.BusinessLogics\UserBiz.cs" line="91" column="68" />
+      <Breakpoint file="E:\MyProjects\UG\marknguyen85\7iclient\Sync7i.Mobile.Share\ViewModels\LoginViewModel.cs" line="97" column="1" />
+      <Breakpoint file="E:\MyProjects\UG\marknguyen85\7iclient\Sync7i.Mobile.BusinessLogics\Helpers\Settings.cs" line="52" column="1" />
+      <Breakpoint file="E:\MyProjects\UG\marknguyen85\7iclient\Sync7i.Mobile.BusinessLogics\Helpers\Settings.cs" line="43" column="1" />
+      <Breakpoint file="E:\MyProjects\UG\marknguyen85\7iclient\UG.Mobile.Framework\AESEngine.cs" line="14" column="56" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="UG.Mobile.Framework\AESEngine.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Sync7i.Mobile.Agents\UsersAgent.cs">
     <Files>
-      <File FileName="UG.Mobile.Framework\AESEngine.cs" Line="14" Column="71" />
+      <File FileName="Sync7i.Mobile.Share\ViewModels\MainViewModel.cs" Line="7" Column="26" />
+      <File FileName="Sync7i.Mobile.Share\ViewModels\OverViewViewModel.cs" Line="40" Column="71" />
+      <File FileName="Sync7i.Mobile.Share\Base\BaseViewModel.cs" Line="78" Column="29" />
+      <File FileName="Sync7i.Mobile.Droid\Base\DroidBaseView.cs" Line="195" Column="31" />
+      <File FileName="Sync7i.Mobile.Droid\Fragments\Home\HomeFragment.cs" Line="17" Column="1" />
+      <File FileName="Sync7i.Mobile.BusinessLogics\OverViewBiz.cs" Line="19" Column="62" />
+      <File FileName="Sync7i.Mobile.Share\ViewModels\LoginViewModel.cs" Line="70" Column="33" />
+      <File FileName="UG.Mobile.Framework\AESEngine.cs" Line="16" Column="1" />
+      <File FileName="Sync7i.Mobile.BusinessLogics\UserBiz.cs" Line="91" Column="1" />
+      <File FileName="Sync7i.Mobile.BusinessLogics\Helpers\Settings.cs" Line="59" Column="37" />
+      <File FileName="Sync7i.Mobile.Agents\UsersAgent.cs" Line="13" Column="31" />
     </Files>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.Sync7i.Mobile.Droid PreferredExecutionTarget="Android.192.168.56.101:5555" />
+  <MonoDevelop.Ide.ItemProperties.Sync7i.Mobile.Droid AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.192.168.56.101:5555" />
 </Properties>
