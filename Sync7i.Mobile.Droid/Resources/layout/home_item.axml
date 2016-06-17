@@ -6,8 +6,18 @@
     android:orientation="horizontal"
     android:padding="20dp">
     <TextView
-        android:layout_width="fill_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        local:MvxBind="Text Text"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+        local:MvxBind="Text Name"
+        android:text="Test"
+        android:textColor="#ff000000"
+        android:layout_gravity="left" />
+    <TextView
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        local:MvxBind="Text Value"
+        android:text="200000"
+        android:gravity="right"
+        android:textColor="@android:color/holo_orange_dark"
+        android:layout_gravity="right" />
 </LinearLayout>

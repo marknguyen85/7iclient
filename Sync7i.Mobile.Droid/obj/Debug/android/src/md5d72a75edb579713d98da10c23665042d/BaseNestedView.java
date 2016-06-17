@@ -10,6 +10,7 @@ public abstract class BaseNestedView
 	public static final String __md_methods;
 	static {
 		__md_methods = 
+			"n_onAttach:(Landroid/content/Context;)V:GetOnAttach_Landroid_content_Context_Handler\n" +
 			"n_onCreateView:(Landroid/view/LayoutInflater;Landroid/view/ViewGroup;Landroid/os/Bundle;)Landroid/view/View;:GetOnCreateView_Landroid_view_LayoutInflater_Landroid_view_ViewGroup_Landroid_os_Bundle_Handler\n" +
 			"n_onConfigurationChanged:(Landroid/content/res/Configuration;)V:GetOnConfigurationChanged_Landroid_content_res_Configuration_Handler\n" +
 			"n_onActivityCreated:(Landroid/os/Bundle;)V:GetOnActivityCreated_Landroid_os_Bundle_Handler\n" +
@@ -24,6 +25,14 @@ public abstract class BaseNestedView
 		if (getClass () == BaseNestedView.class)
 			mono.android.TypeManager.Activate ("Sync7i.Mobile.Droid.BaseNestedView, 7i Client, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
 	}
+
+
+	public void onAttach (android.content.Context p0)
+	{
+		n_onAttach (p0);
+	}
+
+	private native void n_onAttach (android.content.Context p0);
 
 
 	public android.view.View onCreateView (android.view.LayoutInflater p0, android.view.ViewGroup p1, android.os.Bundle p2)

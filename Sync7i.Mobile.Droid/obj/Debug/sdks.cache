@@ -2,18 +2,18 @@
 <Sdk>
   <AndroidApiLevel>23</AndroidApiLevel>
   <AndroidApiLevelName>23</AndroidApiLevelName>
-  <AndroidNdkPath>D:\C_Setup\Android\AndroidNDK\android-ndk-r10e</AndroidNdkPath>
-  <AndroidSdkBuildToolsPath>D:\C_Setup\Android\android-sdk\build-tools\23.0.3</AndroidSdkBuildToolsPath>
-  <AndroidSdkBuildToolsBinPath>D:\C_Setup\Android\android-sdk\build-tools\23.0.3</AndroidSdkBuildToolsBinPath>
-  <AndroidSdkPath>D:\C_Setup\Android\android-sdk</AndroidSdkPath>
-  <JavaSdkPath>D:\C_Setup\Android\Java\jdk1.8.0_92</JavaSdkPath>
-  <MonoAndroidBinPath>C:\Program Files (x86)\MSBuild\Xamarin\Android</MonoAndroidBinPath>
-  <MonoAndroidToolsPath>C:\Program Files (x86)\MSBuild\Xamarin\Android</MonoAndroidToolsPath>
+  <AndroidNdkPath>/Users/MacOs/Library/Developer/Xamarin/android-ndk/android-ndk-r10e</AndroidNdkPath>
+  <AndroidSdkBuildToolsPath>/Users/MacOs/Library/Developer/Xamarin/android-sdk-macosx/build-tools/23.0.1</AndroidSdkBuildToolsPath>
+  <AndroidSdkBuildToolsBinPath>/Users/MacOs/Library/Developer/Xamarin/android-sdk-macosx/build-tools/23.0.1</AndroidSdkBuildToolsBinPath>
+  <AndroidSdkPath>/Users/MacOs/Library/Developer/Xamarin/android-sdk-macosx</AndroidSdkPath>
+  <JavaSdkPath>/usr</JavaSdkPath>
+  <MonoAndroidBinPath>/Library/Frameworks/Xamarin.Android.framework/Versions/Current/bin</MonoAndroidBinPath>
+  <MonoAndroidToolsPath>/Library/Frameworks/Xamarin.Android.framework/Versions/Current/lib/mandroid</MonoAndroidToolsPath>
   <ReferenceAssemblyPaths>
-    <ReferenceAssemblyPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\MonoAndroid\v1.0\</ReferenceAssemblyPath>
+    <ReferenceAssemblyPath>/Library/Frameworks/Mono.framework/External/xbuild-frameworks/MonoAndroid/v1.0</ReferenceAssemblyPath>
   </ReferenceAssemblyPaths>
   <TargetFrameworkVersion>v6.0</TargetFrameworkVersion>
-  <ZipAlignPath>D:\C_Setup\Android\android-sdk\build-tools\23.0.3</ZipAlignPath>
+  <ZipAlignPath>/Users/MacOs/Library/Developer/Xamarin/android-sdk-macosx/build-tools/23.0.1</ZipAlignPath>
   <MonoAndroidIncludePath />
   <SupportedApiLevel>23</SupportedApiLevel>
   <AndroidSequencePointsMode>None</AndroidSequencePointsMode>

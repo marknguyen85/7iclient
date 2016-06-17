@@ -5,19 +5,18 @@ using System;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 using MvvmCross.Core.ViewModels;
-using System.Collections.ObjectModel;
 
 namespace Sync7i.Mobile.Share
 {
 	public class OverViewItem { 
 		public string Name { get; set; }
-		public decimal Value { get; set; }
+		public string Value { get; set; }
 	}
-    public partial class OverviewViewModel : ReportBaseViewModel<OverviewModel>
+    public partial class OverviewViewModel : ReportListBaseViewModel<OverviewModel>
 	{
-		private ObservableCollection<OverViewItem> _listItem;
+		private List<OverViewItem> _listItem;
 
-		public ObservableCollection<OverViewItem> ListItem
+		public List<OverViewItem> ListItem
 		{
 			get
 			{
@@ -38,11 +37,7 @@ namespace Sync7i.Mobile.Share
             {
                 var para = CurrentPara();
                 Model = OverviewModel.Map(await OverViewBiz.Instance.Get(para));
-				ListItem.Add(new OverViewItem
-				{
-					Name = "Bán lẻ",
-					Value = Model.BanLe
-				});
+				ListItem = new List<OverViewItem>(CreateList());
             }
             catch (Exception ex)
             {
@@ -53,7 +48,55 @@ namespace Sync7i.Mobile.Share
                 IsBusy = false;
             }
 		}
-        private const string ParameterKey = "Parameter";
+
+		private const string ParameterKey = "Parameter";
+
+		IEnumerable<OverViewItem> CreateList()
+		{
+			var lst = new List<OverViewItem>();
+			lst.Add(new OverViewItem
+			{
+				Name = "Bán lẻ",
+				Value = Model.BanLe.ToString()
+			});
+			lst.Add(new OverViewItem
+			{
+				Name = "Chi phí",
+				Value = Model.ChiPhi.ToString()
+			});
+			lst.Add(new OverViewItem
+			{
+				Name = "Công nợ",
+				Value = Model.CongNo.ToString()
+			});
+			lst.Add(new OverViewItem
+			{
+				Name = "Nhập hàng",
+				Value = Model.NhapHang.ToString()
+			});
+			lst.Add(new OverViewItem
+			{
+				Name = "Tạm ứng",
+				Value = Model.TamUng.ToString()
+			});
+			lst.Add(new OverViewItem
+			{
+				Name = "Thanh toán",
+				Value = Model.ThanhToan.ToString()
+			});
+			lst.Add(new OverViewItem
+			{
+				Name = "Thu khác",
+				Value = Model.ThuKhac.ToString()
+			});
+			lst.Add(new OverViewItem
+			{
+				Name = "Tiền mặt",
+				Value = Model.TienMat.ToString()
+			});
+			return lst;
+		}
+
         private bool ShowViewModelOverview<TViewModel>(OverviewModel item) where TViewModel : IMvxViewModel
         {
             var text = JsonConvert.SerializeObject(item);
@@ -66,8 +109,8 @@ namespace Sync7i.Mobile.Share
         {
             ShowViewModelOverview<BanLeListViewModel>(item);
         }
-        private ICommand banLeCommand;
-        public ICommand BanLeCommand
+        private IMvxCommand banLeCommand;
+        public IMvxCommand BanLeCommand
         {
             get
             {

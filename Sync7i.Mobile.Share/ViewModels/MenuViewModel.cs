@@ -6,12 +6,11 @@ namespace Sync7i.Mobile.Share
 {
 	public partial class MenuViewModel : BaseViewModel<UserModel>
 	{
-		private ICommand _menuSelectedCommand;
-
-		public ICommand MenuSelectedCommand {
+		private IMvxCommand _userSelectedCommand;
+		public IMvxCommand UserSelectedCommand {
 			get {
-				return (_menuSelectedCommand = _menuSelectedCommand ?? new MvxCommand<MenuItem>((item) => {
-					var a = item;
+				return (_userSelectedCommand = _userSelectedCommand ?? new MvxCommand(() => {
+					
 				}));
 			}
 		}
