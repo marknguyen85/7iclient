@@ -185,6 +185,10 @@
     <AndroidResource Include="Resources\layout\fragment_kehoach.axml" />
     <AndroidResource Include="Resources\layout\home_item.axml" />
     <AndroidResource Include="Resources\layout\fragment_user.axml" />
+    <AndroidResource Include="Resources\layout\fragment_congno_item.axml" />
+    <AndroidResource Include="Resources\layout\fragment_kehoach_item.axml" />
+    <AndroidResource Include="Resources\layout\fragment_kehoach_ct.axml" />
+    <AndroidResource Include="Resources\layout\fragment_kehoach_ct_item.axml" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

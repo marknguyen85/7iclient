@@ -17,11 +17,10 @@
             android:background="?attr/colorPrimary"
             local:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
     </android.support.design.widget.AppBarLayout>
-    <TextView
-        android:text="Settings example"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:id="@+id/textView1"
-        android:textColor="#ff000000"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+    <Mvx.MvxListView
+        android:layout_marginTop="?attr/actionBarSize"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        local:MvxItemTemplate="@layout/fragment_congno_item"
+        local:MvxBind="ItemsSource ListItem" />
 </LinearLayout>

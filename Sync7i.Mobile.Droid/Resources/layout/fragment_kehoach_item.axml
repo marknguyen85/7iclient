@@ -16,12 +16,12 @@
             android:layout_height="wrap_content"
             android:textColor="#ff000000"
             android:textSize="20dip"
-            local:MvxBind="Text Name;Click ItemCommand " />
+            local:MvxBind="Text NgayTT;Click ItemCommand " />
     </LinearLayout>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        local:MvxBind="Text Value;Click ItemCommand "
+        local:MvxBind="Text TongTien;Click ItemCommand "
         android:padding="5dp"
         android:text="200000"
         android:textColor="@android:color/holo_orange_dark"
