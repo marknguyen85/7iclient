@@ -161,6 +161,7 @@
     <Compile Include="Fragments\CuaHang\CuaHangFragment.cs" />
     <Compile Include="Fragments\GiamSat\GiamSatFragment.cs" />
     <Compile Include="Fragments\KeHoach\KeHoachFragment.cs" />
+    <Compile Include="Fragments\User\UserFragment.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config">
@@ -183,6 +184,7 @@
     <AndroidResource Include="Resources\layout\fragment_congno.axml" />
     <AndroidResource Include="Resources\layout\fragment_kehoach.axml" />
     <AndroidResource Include="Resources\layout\home_item.axml" />
+    <AndroidResource Include="Resources\layout\fragment_user.axml" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -196,6 +198,7 @@
     <Folder Include="Fragments\CuaHang\" />
     <Folder Include="Fragments\CongNo\" />
     <Folder Include="Fragments\KeHoach\" />
+    <Folder Include="Fragments\User\" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\MvvmCrossLogo.png" />

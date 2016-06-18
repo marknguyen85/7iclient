@@ -4,6 +4,7 @@ using Sync7i.Mobile.BusinessEntities;
 using Sync7i.Mobile.Common;
 using UG.Mobile.Framework;
 using MvvmCross.Core.ViewModels;
+using System;
 
 namespace Sync7i.Mobile.Share
 {
@@ -73,8 +74,32 @@ namespace Sync7i.Mobile.Share
 			}
 		}
 
+		/// <summary>
+		/// Validated this instance.
+		/// </summary>
+		bool Validated()
+		{
+			if (string.IsNullOrEmpty(Model.UserName))
+			{
+				UXHandler.DisplayAlert("Đăng nhập", "Hãy điền tên đăng nhập!", AlertButton.OK);
+				return false;
+			}
+
+			if (string.IsNullOrEmpty(Model.Password))
+			{
+				UXHandler.DisplayAlert("Đăng nhập", "Hãy điền mật khẩu!", AlertButton.OK);
+				return false;
+			}
+
+			return true;
+		}
+
 		private async void DoLogin ()
 		{
+			if (!Validated())
+			{
+				return;
+			}
 			IsBusy = true;
 			if (!_NService.IsNetworkAvailable ()) {
 				UXHandler.DisplayAlert ("Network Error", "No network available!", AlertButton.OK);
@@ -98,7 +123,8 @@ namespace Sync7i.Mobile.Share
 				IsBusy = false;
 			}
 		}
-	}
+
+}
 }
 
 

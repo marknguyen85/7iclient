@@ -18,8 +18,8 @@
         android:orientation="vertical"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        local:MvxBind="Click UserSelectedCommand "
         android:paddingTop="5dp"
+        local:MvxBind="Click UserSelectedCommand "
         android:paddingLeft="40dip">
         <TextView
             android:id="@+id/MainText"
@@ -27,13 +27,13 @@
             android:layout_height="wrap_content"
             android:textColor="#FF7F3300"
             android:textSize="16dip"
-            local:MvxBind="Text Model.UserName " />
+            local:MvxBind="Text Model.UserName" />
         <TextView
             android:id="@+id/SubText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="12dip"
-            local:MvxBind="Text Model.UserName "
+            local:MvxBind="Text Model.UserName"
             android:textColor="#FF267F00"
             android:textStyle="italic" />
     </LinearLayout>

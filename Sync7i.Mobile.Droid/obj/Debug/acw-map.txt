@@ -54,6 +54,10 @@ Sync7i.Mobile.Droid.Fragments.KeHoachFragment, 7i Client;sync7i.mobile.droid.fra
 Sync7i.Mobile.Droid.Fragments.KeHoachFragment, 7i Client, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;sync7i.mobile.droid.fragments.KeHoachFragment
 Sync7i.Mobile.Droid.Fragments.KeHoachFragment;sync7i.mobile.droid.fragments.KeHoachFragment
 sync7i.mobile.droid.fragments.KeHoachFragment;sync7i.mobile.droid.fragments.KeHoachFragment
+Sync7i.Mobile.Droid.Fragments.UserFragment, 7i Client;sync7i.mobile.droid.fragments.UserFragment
+Sync7i.Mobile.Droid.Fragments.UserFragment, 7i Client, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;sync7i.mobile.droid.fragments.UserFragment
+Sync7i.Mobile.Droid.Fragments.UserFragment;sync7i.mobile.droid.fragments.UserFragment
+sync7i.mobile.droid.fragments.UserFragment;sync7i.mobile.droid.fragments.UserFragment
 MvvmCross.Platform.Droid.MvxJavaContainer, MvvmCross.Platform.Droid;md5fbdfe15bdb740bba08c1f621e9dd1063.MvxJavaContainer
 MvvmCross.Platform.Droid.MvxJavaContainer, MvvmCross.Platform.Droid, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null;md5fbdfe15bdb740bba08c1f621e9dd1063.MvxJavaContainer
 MvvmCross.Platform.Droid.MvxJavaContainer;md5fbdfe15bdb740bba08c1f621e9dd1063.MvxJavaContainer

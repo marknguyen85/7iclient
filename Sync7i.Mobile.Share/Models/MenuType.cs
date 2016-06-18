@@ -9,6 +9,13 @@ namespace Sync7i.Mobile.Share
 		CongNo = 3,
 		KeHoach=4,
 		LogOut=5,
+		BanLe = 6,
+		ChiPhi = 7,
+		NhapHang = 8,
+		TamUng = 9,
+		ThanhToan = 10,
+		ThuKhac = 11,
+		TienMat = 12,
 	}
 }
 

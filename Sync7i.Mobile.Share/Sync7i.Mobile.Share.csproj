@@ -77,6 +77,8 @@
     <Compile Include="Interfaces\IDialogService.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="ViewModels\SettingsViewModel.cs" />
+    <Compile Include="ViewModels\UserViewModel.cs" />
+    <Compile Include="Models\OverviewItem.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Sync7i.Mobile.BusinessEntities\Sync7i.Mobile.BusinessEntities.csproj">

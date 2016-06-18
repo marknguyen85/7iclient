@@ -1,24 +1,29 @@
-﻿using Android.App;
+﻿using System;
+using Android.App;
 using Android.Content.PM;
 using Android.OS;
 using Android.Support.V4.View;
 using Android.Support.V4.Widget;
 using Android.Views;
 using Android.Views.InputMethods;
+using Android.Widget;
 using Sync7i.Mobile.Share;
 
 
 namespace Sync7i.Mobile.Droid.Activities
 {
     [Activity( 
-        Label = "Main Activity",
+        Label = "Trang chủ",
         Theme = "@style/AppTheme",
         LaunchMode = LaunchMode.SingleTop,
         Name = "sync7i.mobile.droid.activities.MainActivity"
     )]
     public class MainActivity : BaseHostedView<MainViewModel>
     {
-        public DrawerLayout DrawerLayout;       
+        public DrawerLayout DrawerLayout;
+
+		static int TIME_INTERVAL = 2; // # milliseconds, desired time passed between two back presses.
+		DateTime mBackPressed = DateTime.MinValue;
 
         protected override void OnCreate(Bundle bundle)
         {
@@ -32,6 +37,26 @@ namespace Sync7i.Mobile.Droid.Activities
                 ViewModel.ShowMenu();
                     
         }
+
+		/// <summary>
+		/// prevent back button
+		/// </summary>
+		/// <returns>The back pressed.</returns>
+		public override void OnBackPressed()
+		{
+			if ((DateTime.Now - mBackPressed).TotalSeconds < TIME_INTERVAL)
+			{
+				Process.KillProcess(Process.MyPid());
+				return;
+			}
+			else { 
+				if (DrawerLayout != null && DrawerLayout.IsDrawerOpen(GravityCompat.Start))
+					DrawerLayout.CloseDrawers();
+				else
+					Toast.MakeText(this.ApplicationContext, "Nhấn 2 lần để thoát ứng dụng", ToastLength.Short).Show(); 
+			}
+			mBackPressed = DateTime.Now;
+		}
 
         public override bool OnOptionsItemSelected(IMenuItem item)
         {
@@ -61,14 +86,6 @@ namespace Sync7i.Mobile.Droid.Activities
 
             //Unlock the menu sliding gesture
             DrawerLayout.SetDrawerLockMode(DrawerLayout.LockModeUnlocked);
-        }
-
-        public override void OnBackPressed()
-        {
-            if (DrawerLayout != null && DrawerLayout.IsDrawerOpen(GravityCompat.Start))
-                DrawerLayout.CloseDrawers();
-            else
-                base.OnBackPressed();
         }
 
 		public void HideSoftKeyboard()

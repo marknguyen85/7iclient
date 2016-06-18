@@ -8,10 +8,6 @@ using MvvmCross.Core.ViewModels;
 
 namespace Sync7i.Mobile.Share
 {
-	public class OverViewItem { 
-		public string Name { get; set; }
-		public string Value { get; set; }
-	}
     public partial class OverviewViewModel : ReportListBaseViewModel<OverviewModel>
 	{
 		private List<OverViewItem> _listItem;
@@ -37,7 +33,7 @@ namespace Sync7i.Mobile.Share
             {
                 var para = CurrentPara();
                 Model = OverviewModel.Map(await OverViewBiz.Instance.Get(para));
-				ListItem = new List<OverViewItem>(CreateList());
+				ListItem = new List<OverViewItem>(CreateList(Model));
             }
             catch (Exception ex)
             {
@@ -51,59 +47,62 @@ namespace Sync7i.Mobile.Share
 
 		private const string ParameterKey = "Parameter";
 
-		IEnumerable<OverViewItem> CreateList()
+		IEnumerable<OverViewItem> CreateList(OverviewModel model)
 		{
 			var lst = new List<OverViewItem>();
-			lst.Add(new OverViewItem
-			{
-				Name = "Bán lẻ",
-				Value = Model.BanLe.ToString()
-			});
-			lst.Add(new OverViewItem
-			{
-				Name = "Chi phí",
-				Value = Model.ChiPhi.ToString()
-			});
-			lst.Add(new OverViewItem
-			{
-				Name = "Công nợ",
-				Value = Model.CongNo.ToString()
-			});
-			lst.Add(new OverViewItem
-			{
-				Name = "Nhập hàng",
-				Value = Model.NhapHang.ToString()
-			});
-			lst.Add(new OverViewItem
-			{
-				Name = "Tạm ứng",
-				Value = Model.TamUng.ToString()
-			});
-			lst.Add(new OverViewItem
-			{
-				Name = "Thanh toán",
-				Value = Model.ThanhToan.ToString()
-			});
-			lst.Add(new OverViewItem
-			{
-				Name = "Thu khác",
-				Value = Model.ThuKhac.ToString()
-			});
-			lst.Add(new OverViewItem
-			{
-				Name = "Tiền mặt",
-				Value = Model.TienMat.ToString()
-			});
+			lst.Add(new OverViewItem(this, MenuType.BanLe, "Bán lẻ", Model.BanLe.ToString()));
+			lst.Add(new OverViewItem(this, MenuType.BanLe, "Chi phí", Model.ChiPhi.ToString()));
+			lst.Add(new OverViewItem(this, MenuType.BanLe, "Công nợ", Model.CongNo.ToString()));
+			lst.Add(new OverViewItem(this, MenuType.BanLe, "Nhập hàng", Model.NhapHang.ToString()));
+			lst.Add(new OverViewItem(this, MenuType.BanLe, "Tạm ứng", Model.TamUng.ToString()));
+			lst.Add(new OverViewItem(this, MenuType.BanLe, "Thanh toán", Model.ThanhToan.ToString()));
+			lst.Add(new OverViewItem(this, MenuType.BanLe, "Thu khác", Model.ThuKhac.ToString()));
+			lst.Add(new OverViewItem(this, MenuType.BanLe, "Tiền mặt", Model.TienMat.ToString()));
+
 			return lst;
 		}
 
-        private bool ShowViewModelOverview<TViewModel>(OverviewModel item) where TViewModel : IMvxViewModel
+		public void OverViewItemCommand(OverViewItem item)
+		{
+			if (item.Type == MenuType.BanLe)
+			{
+				ShowBanLe(item.Model);
+			}
+			else if (item.Type == MenuType.CongNo)
+			{
+				ShowCongNo(item.Model);
+			}
+			else if (item.Type == MenuType.NhapHang)
+			{
+				ShowNhapHang(item.Model);
+			}
+			else if (item.Type == MenuType.TamUng)
+			{
+				ShowTamUng(item.Model);
+			}
+			else if (item.Type == MenuType.ThanhToan)
+			{
+				ShowThanhToan(item.Model);
+			}
+			else if (item.Type == MenuType.ThuKhac)
+			{
+				ShowThuKhac(item.Model);
+			}
+			else if (item.Type == MenuType.ChiPhi)
+			{
+			}
+			else if (item.Type == MenuType.TienMat)
+			{
+			}
+		}
+
+		private bool ShowViewModelOverview<TViewModel>(OverviewModel item) where TViewModel : IMvxViewModel
         {
-            var text = JsonConvert.SerializeObject(item);
-            return ShowViewModel<TViewModel>(new Dictionary<string, string>()
-            {
-                {ParameterKey, text}
-            });
+			var text = JsonConvert.SerializeObject(item);
+			return ShowViewModel<TViewModel>(new Dictionary<string, string>()
+			{
+				{ParameterKey, text}
+			});
         }
         public void ShowBanLe(OverviewModel item)
         {

@@ -1,16 +1,45 @@
 
+using System;
 using System.Windows.Input;
 using MvvmCross.Core.ViewModels;
+using Sync7i.Mobile.BusinessLogics;
 
 namespace Sync7i.Mobile.Share
 {
 	public partial class MenuViewModel : BaseViewModel<UserModel>
 	{
+		public MenuViewModel()
+		{
+			IsBusy = true;
+			try
+			{
+				Model = new UserModel();
+				if (UserBiz.Instance.User != null)
+				{
+					Model.UserName = UserBiz.Instance.User.UserId;
+					Model.Password = UserBiz.Instance.User.Password;
+
+				}
+				else {
+					Model.UserName = "Guest";
+					Model.Password = "";
+				}
+			}
+			catch (Exception ex)
+			{
+				UXHandler.DisplayAlert("Overview Error", ex.Message, AlertButton.OK);
+			}
+			finally
+			{
+				IsBusy = false;
+			}
+		}
+
 		private IMvxCommand _userSelectedCommand;
 		public IMvxCommand UserSelectedCommand {
 			get {
 				return (_userSelectedCommand = _userSelectedCommand ?? new MvxCommand(() => {
-					
+					ShowViewModel<UserViewModel>();
 				}));
 			}
 		}
@@ -95,15 +124,6 @@ namespace Sync7i.Mobile.Share
         {
             ShowViewModel<LoginViewModel>();
         }
-        private IMvxCommand _LogoutCommand;
-        public IMvxCommand LogoutCommand
-        {
-            get
-            {
-                return (_LogoutCommand = _LogoutCommand ?? new MvxCommand(ShowPlan));
-            }
-        }
-        
 	}
 }
 
