@@ -13,21 +13,17 @@ using Android.OS;
 using Android.Support.V7.Widget;
 using Sync7i.Mobile.Droid.Activities;
 using MvvmCross.Binding.Droid.BindingContext;
+using Sync7i.Mobile.Share.Interfaces;
 
 namespace Sync7i.Mobile.Droid
 {
-	public abstract class DroidBaseView<T> : MvxAppCompatActivity<T> where T: BaseViewModel
+	public abstract class DroidBaseView<T> : MvxAppCompatActivity<T>, IUXHandler where T: BaseViewModel
 	{
+		
 		public void DisplayAlert(string title, string message, AlertButton close)
 		{
-			var dispatcher = Mvx.Resolve<IMvxMainThreadDispatcher>();
-			dispatcher.RequestMainThreadAction(() => {
-				AlertDialog.Builder builder = new AlertDialog.Builder(this);
-				builder.SetTitle(title);
-				builder.SetMessage(message);
-				builder.SetNegativeButton(close.ToString(), (EventHandler<DialogClickEventArgs>)null);
-				builder.Show();
-			});
+			var dialog = Mvx.Resolve<IDialogService>();
+			dialog.Alert(message, title, close.ToString());
 		}
 
 		private ProgressDialog _progressDialog = null;
@@ -59,25 +55,40 @@ namespace Sync7i.Mobile.Droid
 				return temp; 
 			}
 			set { 
-				base.ViewModel = value; 
+				base.ViewModel = value;
+				if (value != null)
+				{
+					value.UXHandler = this;
+				}
 			}
 		}
 
+		protected override void OnViewModelSet()
+		{
+			base.OnViewModelSet();
+
+			var temp = base.ViewModel as T;
+			if (temp != null)
+			{
+				temp.UXHandler = this;
+			}
+
+			var viewWithCycle = ViewModel as IViewLifeCycle;
+
+			if (viewWithCycle != null)
+			{
+				viewWithCycle.OnCreate();
+			}
+
+		}
 	}
 
-	public abstract class BaseHostedView<T> : MvxCachingFragmentCompatActivity<T> where T : BaseViewModel
+	public abstract class BaseHostedView<T> : MvxCachingFragmentCompatActivity<T>, IUXHandler where T : BaseViewModel
 	{
 		public void DisplayAlert(string title, string message, AlertButton close)
 		{
-			var dispatcher = Mvx.Resolve<IMvxMainThreadDispatcher>();
-			dispatcher.RequestMainThreadAction(() =>
-			{
-				AlertDialog.Builder builder = new AlertDialog.Builder(this);
-				builder.SetTitle(title);
-				builder.SetMessage(message);
-				builder.SetNegativeButton(close.ToString(), (EventHandler<DialogClickEventArgs>)null);
-				builder.Show();
-			});
+			var dialog = Mvx.Resolve<IDialogService>();
+			dialog.Alert(message, title, close.ToString());
 		}
 
 		private ProgressDialog _progressDialog = null;
@@ -113,11 +124,15 @@ namespace Sync7i.Mobile.Droid
 			set
 			{
 				base.ViewModel = value;
+				if (value != null)
+				{
+					value.UXHandler = this;
+				}
 			}
 		}
 	}
 
-	public abstract class BaseNestedView : MvxFragment
+	public abstract class BaseNestedView<T> : MvxFragment, IUXHandler where T : BaseViewModel, IMvxViewModel
 	{
 		protected Toolbar _toolbar;
 		protected MvxActionBarDrawerToggle _drawerToggle;
@@ -135,7 +150,7 @@ namespace Sync7i.Mobile.Droid
 		{
 			if (ViewModel != null)
 			{
-				((BaseViewModel)this.ViewModel).OnDetach();
+				this.ViewModel.OnDetach();
 			}
 			base.OnAttach(context);
 		}
@@ -160,7 +175,8 @@ namespace Sync7i.Mobile.Droid
 						Resource.String.drawer_open,            // "open drawer" description
 						Resource.String.drawer_close            // "close drawer" description
 					);
-					_drawerToggle.DrawerOpened += (object sender, ActionBarDrawerEventArgs e) => {
+					_drawerToggle.DrawerOpened += (object sender, ActionBarDrawerEventArgs e) =>
+					{
 						if (Activity != null)
 							((MainActivity)Activity).HideSoftKeyboard();
 					};
@@ -170,7 +186,14 @@ namespace Sync7i.Mobile.Droid
 
 			if (ViewModel != null)
 			{
-				((BaseViewModel)this.ViewModel).OnCreate();
+				this.ViewModel.OnCreate();
+
+				var temp = this.ViewModel as T;
+				if (temp != null)
+				{
+					temp.UXHandler = this;
+				}
+
 			}
 
 			return view;
@@ -195,44 +218,11 @@ namespace Sync7i.Mobile.Droid
 				_drawerToggle.SyncState();
 			}
 		}
-	}
 
-	public abstract class BaseNestedView<T> : BaseNestedView where T : BaseViewModel, IMvxViewModel
-	{
-		public void DisplayAlert(string title, string message, AlertButton close)
+		public void DisplayAlert(string title, string message, AlertButton button)
 		{
-			var dispatcher = Mvx.Resolve<IMvxMainThreadDispatcher>();
-			dispatcher.RequestMainThreadAction(() =>
-			{
-				AlertDialog.Builder builder = new AlertDialog.Builder(this.Activity);
-				builder.SetTitle(title);
-				builder.SetMessage(message);
-				builder.SetNegativeButton(close.ToString(), (EventHandler<DialogClickEventArgs>)null);
-				builder.Show();
-			});
-		}
-
-		private ProgressDialog _progressDialog = null;
-		public void ShowWaiting(string title, string message)
-		{
-			if (_progressDialog == null)
-			{
-				_progressDialog = new ProgressDialog(this.Activity, Android.Resource.Style.ThemeDialog) { Indeterminate = false };
-				_progressDialog.SetProgressStyle(ProgressDialogStyle.Spinner);
-				_progressDialog.SetCancelable(false);
-			}
-
-			_progressDialog.SetTitle(title);
-			_progressDialog.SetMessage(message);
-
-			_progressDialog.Show();
-		}
-		public void HideWaiting()
-		{
-			if (_progressDialog != null)
-			{
-				_progressDialog.Hide();
-			}
+			var dialog = Mvx.Resolve<IDialogService>();
+			dialog.Alert(message, title, button.ToString());
 		}
 
 		public new T ViewModel
