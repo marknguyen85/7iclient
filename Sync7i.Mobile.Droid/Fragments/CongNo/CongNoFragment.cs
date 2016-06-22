@@ -13,9 +13,17 @@ namespace Sync7i.Mobile.Droid.Fragments
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
             base.showHamburgerMenu = true;
-            return base.OnCreateView(inflater, container, savedInstanceState);
+            var view = base.OnCreateView(inflater, container, savedInstanceState);
+			return view;
         }
 
+		protected override string FragmentName
+		{
+			get
+			{
+				return "Công nợ";
+			}
+		}
         protected override int FragmentId
         {
             get

@@ -1,4 +1,5 @@
-﻿using Android.OS;
+﻿using System;
+using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using MvvmCross.Droid.Shared.Attributes;
@@ -30,5 +31,12 @@ namespace Sync7i.Mobile.Droid.Fragments
 			}
 		}
 
-    }
+		protected override string FragmentName
+		{
+			get
+			{
+				return "";
+			}
+		}
+	}
 }

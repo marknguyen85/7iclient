@@ -3,6 +3,7 @@ using Android.Views;
 using Android.OS;
 using MvvmCross.Droid.Shared.Attributes;
 using Sync7i.Mobile.Share;
+using System;
 
 namespace Sync7i.Mobile.Droid.Fragments
 {
@@ -23,5 +24,13 @@ namespace Sync7i.Mobile.Droid.Fragments
 				return Resource.Layout.fragment_cuahang;
             }
         }
-    }
+
+		protected override string FragmentName
+		{
+			get
+			{
+				return "";
+			}
+		}
+	}
 }

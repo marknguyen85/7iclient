@@ -1,8 +1,6 @@
 ﻿using Sync7i.Mobile.Share;
 using Android.App;
-using System;
 using Android.Content;
-using MvvmCross.Platform.Core;
 using MvvmCross.Platform;
 using MvvmCross.Droid.Support.V7.AppCompat;
 using MvvmCross.Droid.Support.V4;
@@ -14,6 +12,7 @@ using Android.Support.V7.Widget;
 using Sync7i.Mobile.Droid.Activities;
 using MvvmCross.Binding.Droid.BindingContext;
 using Sync7i.Mobile.Share.Interfaces;
+using Java.Lang;
 
 namespace Sync7i.Mobile.Droid
 {
@@ -24,6 +23,11 @@ namespace Sync7i.Mobile.Droid
 		{
 			var dialog = Mvx.Resolve<IDialogService>();
 			dialog.Alert(message, title, close.ToString());
+		}
+
+		public void AppExit()
+		{
+			JavaSystem.Exit(0);
 		}
 
 		private ProgressDialog _progressDialog = null;
@@ -89,6 +93,11 @@ namespace Sync7i.Mobile.Droid
 		{
 			var dialog = Mvx.Resolve<IDialogService>();
 			dialog.Alert(message, title, close.ToString());
+		}
+
+		public void AppExit()
+		{
+			JavaSystem.Exit(0);
 		}
 
 		private ProgressDialog _progressDialog = null;
@@ -163,6 +172,12 @@ namespace Sync7i.Mobile.Droid
 			_toolbar = view.FindViewById<Toolbar>(Resource.Id.toolbar);
 			if (_toolbar != null)
 			{
+				//set title of 
+				if (string.IsNullOrEmpty(FragmentName))
+				{
+					_toolbar.Title = FragmentName;
+				}
+
 				((MainActivity)Activity).SetSupportActionBar(_toolbar);
 				if (showHamburgerMenu)
 				{
@@ -175,6 +190,7 @@ namespace Sync7i.Mobile.Droid
 						Resource.String.drawer_open,            // "open drawer" description
 						Resource.String.drawer_close            // "close drawer" description
 					);
+
 					_drawerToggle.DrawerOpened += (object sender, ActionBarDrawerEventArgs e) =>
 					{
 						if (Activity != null)
@@ -201,6 +217,8 @@ namespace Sync7i.Mobile.Droid
 
 		protected abstract int FragmentId { get; }
 
+		protected abstract string FragmentName { get; }
+
 		public override void OnConfigurationChanged(Configuration newConfig)
 		{
 			base.OnConfigurationChanged(newConfig);
@@ -223,6 +241,11 @@ namespace Sync7i.Mobile.Droid
 		{
 			var dialog = Mvx.Resolve<IDialogService>();
 			dialog.Alert(message, title, button.ToString());
+		}
+
+		public void AppExit()
+		{
+			JavaSystem.Exit(0);
 		}
 
 		public new T ViewModel

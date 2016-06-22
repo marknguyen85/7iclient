@@ -7,6 +7,7 @@ using Android.Support.V4.Widget;
 using Android.Views;
 using Android.Views.InputMethods;
 using Android.Widget;
+using Java.Lang;
 using Sync7i.Mobile.Share;
 
 
@@ -46,7 +47,8 @@ namespace Sync7i.Mobile.Droid.Activities
 		{
 			if ((DateTime.Now - mBackPressed).TotalSeconds < TIME_INTERVAL)
 			{
-				Process.KillProcess(Process.MyPid());
+				AppExit();
+				//Process.KillProcess(Process.MyPid());
 				return;
 			}
 			else { 
