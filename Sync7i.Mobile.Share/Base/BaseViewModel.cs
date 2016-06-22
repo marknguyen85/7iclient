@@ -21,6 +21,7 @@ namespace Sync7i.Mobile.Share
     public interface IUXHandler
     {
         void DisplayAlert(string title, string message, AlertButton button);
+		void AppExit();
     }
 
 	public interface IViewLifeCycle {
