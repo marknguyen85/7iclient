@@ -4,7 +4,7 @@ using MvvmCross.Droid.Views;
 
 namespace Sync7i.Mobile.Droid
 {
-    [Activity(
+	[Activity(
 		MainLauncher = true
 		, Theme = "@style/AppTheme.Splash"
 		, NoHistory = true
