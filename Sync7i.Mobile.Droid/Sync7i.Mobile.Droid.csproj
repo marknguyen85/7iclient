@@ -189,6 +189,7 @@
     <AndroidResource Include="Resources\layout\fragment_kehoach_item.axml" />
     <AndroidResource Include="Resources\layout\fragment_kehoach_ct.axml" />
     <AndroidResource Include="Resources\layout\fragment_kehoach_ct_item.axml" />
+    <AndroidResource Include="Resources\layout\network_alert.axml" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
