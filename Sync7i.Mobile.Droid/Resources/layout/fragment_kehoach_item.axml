@@ -16,6 +16,7 @@
             android:layout_height="wrap_content"
             android:textColor="#ff000000"
             android:textSize="20dip"
+            android:text="Plan 1"
             local:MvxBind="Text NgayTT;Click ItemCommand " />
     </LinearLayout>
     <TextView

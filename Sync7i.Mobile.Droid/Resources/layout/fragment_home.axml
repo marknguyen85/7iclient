@@ -6,6 +6,8 @@
     android:layout_height="match_parent">
     <include
         layout="@layout/toolbar_actionbar" />
+    <include
+        layout="@layout/network_alert" />
     <Mvx.MvxListView
         android:layout_marginTop="?attr/actionBarSize"
         android:layout_width="fill_parent"

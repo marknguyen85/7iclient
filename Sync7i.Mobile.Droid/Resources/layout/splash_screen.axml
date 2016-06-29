@@ -4,11 +4,20 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:fitsSystemWindows="true">
-    <include
+    <ImageView
+        android:id="@+id/ImageLoading"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:padding="5dp"
+        android:src="@drawable/Logo"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true" />
+<!--    <include
         layout="@layout/toolbar_actionbar" />
     <ProgressBar
         android:layout_width="wrap_content"
         android:layout_height="fill_parent"
         android:layout_gravity="center"
-        android:gravity="center" />
+        android:gravity="center" />-->
 </LinearLayout>

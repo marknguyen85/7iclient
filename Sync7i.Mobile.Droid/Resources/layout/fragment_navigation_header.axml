@@ -27,12 +27,14 @@
             android:layout_height="wrap_content"
             android:textColor="#FF7F3300"
             android:textSize="16dip"
+            android:text="test"
             local:MvxBind="Text Model.UserName" />
         <TextView
             android:id="@+id/SubText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="12dip"
+            android:text="test"
             local:MvxBind="Text Model.UserName"
             android:textColor="#FF267F00"
             android:textStyle="italic" />
