@@ -12,17 +12,14 @@ namespace Sync7i.Mobile.Share
 {
     public partial class NhapHangPlanViewModel : BaseViewModel<NhapHangPlanModel>
 	{
-        public NhapHangPlanViewModel()
-        {
-        }
-
-		public void Init(){
-			
-		}
 		public override async void OnCreate ()
 		{
 			base.OnCreate ();
-            IsBusy = true;
+			if (IsNotConnected)
+			{
+				return;
+			}
+			IsBusy = true;
             ListFullPara para = new ListFullPara();
             para.ListStore = CurrentListStore;
             try

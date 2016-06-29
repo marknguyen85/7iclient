@@ -9,6 +9,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Windows.Input;
 using UG.Mobile.Framework;
+using MvvmCross.Platform;
 
 namespace Sync7i.Mobile.Share
 {
@@ -30,6 +31,14 @@ namespace Sync7i.Mobile.Share
 	}
 	public abstract class BaseViewModel : MvxViewModel, IViewLifeCycle
 	{
+		protected readonly INetworkService _NService;
+		protected readonly IPlatform _platForm;
+		public BaseViewModel()
+		{
+			_NService = Mvx.Resolve<INetworkService>();
+			_platForm = Mvx.Resolve<IPlatform>();
+		}
+
 		private bool _SidebarShown;
 
 		public bool SidebarShown {
@@ -55,7 +64,19 @@ namespace Sync7i.Mobile.Share
             }
         }
 
-        private void ShowMenuViewModel()
+		private IMvxCommand _checkNetworkCommand;
+		public IMvxCommand CheckNetworkCommand
+		{
+			get
+			{
+				return (_checkNetworkCommand = _checkNetworkCommand ?? new MvxCommand(() =>
+				{
+					IsNotConnected = !_NService.IsNetworkAvailable();
+				}));
+			}
+		}
+
+		private void ShowMenuViewModel()
         {
 			SidebarShown = true;
             //Show menu
@@ -72,14 +93,37 @@ namespace Sync7i.Mobile.Share
             }
             set
             {
-                SetProperty(ref _IsBusy, value);
+				SetProperty(ref _IsBusy, value);
             }
         }
+
+		private bool _IsNotConnected;
+
+		public bool IsNotConnected
+		{
+			get
+			{
+				return _IsNotConnected;
+			}
+			set
+			{
+				SetProperty(ref _IsNotConnected, value);
+			}
+		}
         #region IViewLifeCycle implementation
         public virtual void OnCreate()
         {
+			if (!_NService.IsNetworkAvailable())
+			{
+				IsNotConnected = true;
+				return;
+			}
+			else
+			{
+				IsNotConnected = false;
+			}
 
-        }
+		}
 
 		public void OnDetach ()
 		{
@@ -89,7 +133,8 @@ namespace Sync7i.Mobile.Share
     }
     public abstract class BaseViewModel<T> : BaseViewModel where T : BaseModel
     {
-        public List<int> CurrentListStore { get { return UserBiz.Instance.ListStores; } }
+		
+		public List<int> CurrentListStore { get { return UserBiz.Instance.ListStores; } }
 
         private T _model;
 
@@ -264,7 +309,7 @@ namespace Sync7i.Mobile.Share
     }
     public abstract class ReportListBaseViewModel<T> : ReportBaseViewModel<T> where T : BaseModel
     {
-        private OverviewModel _OverviewModel;
+		private OverviewModel _OverviewModel;
         public OverviewModel OverviewModel
         {
             get
@@ -281,10 +326,15 @@ namespace Sync7i.Mobile.Share
             if (!string.IsNullOrWhiteSpace(Parameter))
                 OverviewModel = JsonConvert.DeserializeObject<OverviewModel>(Parameter);
         }
+
         public override async void OnCreate()
         {
             base.OnCreate();
-            if (OverviewModel == null)
+			if (IsNotConnected)
+			{
+				return;
+			}
+			if (OverviewModel == null)
             {
                 IsBusy = true;
                 try

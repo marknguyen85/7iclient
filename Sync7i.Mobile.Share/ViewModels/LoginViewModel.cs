@@ -21,6 +21,7 @@ namespace Sync7i.Mobile.Share
 		public override void Start ()
 		{
 			base.Start ();
+
 			if (string.IsNullOrWhiteSpace (UserBiz.Instance.UGToken)) {
 				Model = new UserModel ();
 				if (UserBiz.Instance.User != null) {
@@ -100,12 +101,16 @@ namespace Sync7i.Mobile.Share
 			{
 				return;
 			}
-			IsBusy = true;
 			if (!_NService.IsNetworkAvailable ()) {
-				UXHandler.DisplayAlert ("Network Error", "No network available!", AlertButton.OK);
+				IsNotConnected = true;
 				return;
 			}
-            
+			else
+			{
+				IsNotConnected = false;
+			}
+			IsBusy = true;
+
 			try {//"7BxuB2XwNUtceKvhG1Y88Q=="
 				var status = await UserBiz.Instance.Authen (new UserAuthen (Model.UserName, Model.Password, _NService.MacAddress (), Sync7iConstants.ExpireTimeSpanHours));
 
