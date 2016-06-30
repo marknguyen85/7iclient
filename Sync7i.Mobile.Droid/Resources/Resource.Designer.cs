@@ -2273,17 +2273,20 @@ namespace Sync7i.Mobile.Droid
 			// aapt resource value: 0x7f0b0018
 			public const int multiply = 2131427352;
 			
+			// aapt resource value: 0x7f0b009e
+			public const int nav_congno = 2131427486;
+			
 			// aapt resource value: 0x7f0b009d
-			public const int nav_congno = 2131427485;
+			public const int nav_cuahang = 2131427485;
 			
-			// aapt resource value: 0x7f0b009c
-			public const int nav_cuahang = 2131427484;
-			
-			// aapt resource value: 0x7f0b009f
-			public const int nav_footer = 2131427487;
+			// aapt resource value: 0x7f0b00a0
+			public const int nav_footer = 2131427488;
 			
 			// aapt resource value: 0x7f0b009b
-			public const int nav_giamsat = 2131427483;
+			public const int nav_func = 2131427483;
+			
+			// aapt resource value: 0x7f0b009c
+			public const int nav_giamsat = 2131427484;
 			
 			// aapt resource value: 0x7f0b009a
 			public const int nav_home = 2131427482;
@@ -2291,11 +2294,11 @@ namespace Sync7i.Mobile.Droid
 			// aapt resource value: 0x7f0b0099
 			public const int nav_items = 2131427481;
 			
-			// aapt resource value: 0x7f0b009e
-			public const int nav_kehoach = 2131427486;
+			// aapt resource value: 0x7f0b009f
+			public const int nav_kehoach = 2131427487;
 			
-			// aapt resource value: 0x7f0b00a0
-			public const int nav_settings = 2131427488;
+			// aapt resource value: 0x7f0b00a1
+			public const int nav_settings = 2131427489;
 			
 			// aapt resource value: 0x7f0b0074
 			public const int navigation_frame = 2131427444;
