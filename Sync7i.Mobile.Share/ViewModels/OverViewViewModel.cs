@@ -56,14 +56,14 @@ namespace Sync7i.Mobile.Share
 		IEnumerable<OverViewItem> CreateList(OverviewModel model)
 		{
 			var lst = new List<OverViewItem>();
-			lst.Add(new OverViewItem(this, MenuType.BanLe, "Bán lẻ", Model.BanLe.ToString()));
-			lst.Add(new OverViewItem(this, MenuType.BanLe, "Chi phí", Model.ChiPhi.ToString()));
-			lst.Add(new OverViewItem(this, MenuType.BanLe, "Công nợ", Model.CongNo.ToString()));
-			lst.Add(new OverViewItem(this, MenuType.BanLe, "Nhập hàng", Model.NhapHang.ToString()));
-			lst.Add(new OverViewItem(this, MenuType.BanLe, "Tạm ứng", Model.TamUng.ToString()));
-			lst.Add(new OverViewItem(this, MenuType.BanLe, "Thanh toán", Model.ThanhToan.ToString()));
-			lst.Add(new OverViewItem(this, MenuType.BanLe, "Thu khác", Model.ThuKhac.ToString()));
-			lst.Add(new OverViewItem(this, MenuType.BanLe, "Tiền mặt", Model.TienMat.ToString()));
+			lst.Add(new OverViewItem(this, MenuType.BanLe, "Bán lẻ", Model.BanLe.ToString("N0")));
+			lst.Add(new OverViewItem(this, MenuType.BanLe, "Chi phí", Model.ChiPhi.ToString("N0")));
+			lst.Add(new OverViewItem(this, MenuType.BanLe, "Công nợ", Model.CongNo.ToString("N0")));
+			lst.Add(new OverViewItem(this, MenuType.BanLe, "Nhập hàng", Model.NhapHang.ToString("N0")));
+			lst.Add(new OverViewItem(this, MenuType.BanLe, "Tạm ứng", Model.TamUng.ToString("N0")));
+			lst.Add(new OverViewItem(this, MenuType.BanLe, "Thanh toán", Model.ThanhToan.ToString("N0")));
+			lst.Add(new OverViewItem(this, MenuType.BanLe, "Thu khác", Model.ThuKhac.ToString("N0")));
+			lst.Add(new OverViewItem(this, MenuType.BanLe, "Tiền mặt", Model.TienMat.ToString("N0")));
 
 			return lst;
 		}

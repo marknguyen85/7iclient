@@ -277,13 +277,15 @@ namespace Sync7i.Mobile.Share
         }
         private ListFullPara GetPara(List<int> lstStoreID, DateType dateType, int dateNav)
         {
+			//TODO: fake date 
+			var cDate = new DateTime(2015, 11, 01);
             ListFullPara para = new ListFullPara();
             para.ListStore = lstStoreID;
             switch (dateType)
             {
                 case DateType.Daily:
-                    AppPara.StartDate = DateTime.Now.Date.AddDays(dateNav);
-                    AppPara.EndDate = DateTime.Now.Date.AddDays(dateNav);
+					AppPara.StartDate = cDate.Date.AddDays(dateNav);
+                    AppPara.EndDate = cDate.Date.AddDays(dateNav);
                     break;
                 case DateType.Weekly:
                     AppPara.StartDate = Week.CurrentWeek.WeekStart.AddDays(dateNav * 7);
