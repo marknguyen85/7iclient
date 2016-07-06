@@ -42,4 +42,7 @@
         local:MvxItemTemplate="@layout/fragment_kehoach_item"
         local:MvxBind="ItemsSource ListModel"
         android:background="#ff0d47a1" />
+    <include
+        android:id="@+id/toolbar_bottom"
+        layout="@layout/toolbar_bottombar" />
 </LinearLayout>

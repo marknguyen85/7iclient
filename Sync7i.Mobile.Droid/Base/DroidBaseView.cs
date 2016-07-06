@@ -13,6 +13,7 @@ using Sync7i.Mobile.Droid.Activities;
 using MvvmCross.Binding.Droid.BindingContext;
 using Sync7i.Mobile.Share.Interfaces;
 using Java.Lang;
+using System;
 
 namespace Sync7i.Mobile.Droid
 {
@@ -144,6 +145,7 @@ namespace Sync7i.Mobile.Droid
 	public abstract class BaseNestedView<T> : MvxFragment, IUXHandler where T : BaseViewModel, IMvxViewModel
 	{
 		protected Toolbar _toolbar;
+		protected Toolbar _bottombar;
 		protected MvxActionBarDrawerToggle _drawerToggle;
 		/// <summary>
 		/// If true show the hamburger menu
@@ -169,15 +171,38 @@ namespace Sync7i.Mobile.Droid
 			var ignore = base.OnCreateView(inflater, container, savedInstanceState);
 
 			var view = this.BindingInflate(FragmentId, null);
+			SettingTopBar(view);
+			SettingBottomBar(view);
+
+			if (ViewModel != null)
+			{
+				this.ViewModel.OnCreate();
+
+				var temp = this.ViewModel as T;
+				if (temp != null)
+				{
+					temp.UXHandler = this;
+				}
+
+			}
+
+			return view;
+		}
+
+		protected abstract int FragmentId { get; }
+
+		void SettingTopBar(View view)
+		{
 			_toolbar = view.FindViewById<Toolbar>(Resource.Id.toolbar);
 			if (_toolbar != null)
 			{
 				//set title of 
-				if (string.IsNullOrEmpty(FragmentName))
+				if (!string.IsNullOrEmpty(FragmentName))
 				{
 					_toolbar.Title = FragmentName;
 				}
-
+				//assign current fragment
+				((MainActivity)Activity).CurFragmentId = FragmentId;
 				((MainActivity)Activity).SetSupportActionBar(_toolbar);
 				if (showHamburgerMenu)
 				{
@@ -196,26 +221,24 @@ namespace Sync7i.Mobile.Droid
 						if (Activity != null)
 							((MainActivity)Activity).HideSoftKeyboard();
 					};
+
 					((MainActivity)Activity).DrawerLayout.AddDrawerListener(_drawerToggle);
 				}
 			}
-
-			if (ViewModel != null)
-			{
-				this.ViewModel.OnCreate();
-
-				var temp = this.ViewModel as T;
-				if (temp != null)
-				{
-					temp.UXHandler = this;
-				}
-
-			}
-
-			return view;
 		}
 
-		protected abstract int FragmentId { get; }
+		void SettingBottomBar(View view)
+		{
+			//_bottombar = view.FindViewById<Toolbar>(Resource.Id.bottombar);
+			//if (_bottombar != null)
+			//{
+			//	_bottombar.InflateMenu(Resource.Menu.bottom);
+			//	_bottombar.MenuItemClick += (sender, e) =>
+			//	{
+			//		((MainActivity)Activity).BottomMenuItemClick(sender, e);
+			//	};
+			//}
+		}
 
 		protected abstract string FragmentName { get; }
 

@@ -32,5 +32,18 @@ namespace Sync7i.Mobile.Droid.Fragments
 				return "Settings";
 			}
 		}
+
+		/// <Docs>The options menu in which you place your items.</Docs>
+		/// <returns>To be added.</returns>
+		/// <summary>
+		/// This is the menu for the Toolbar/Action Bar to use
+		/// </summary>
+		/// <param name="menu">Menu.</param>
+		public override void OnCreateOptionsMenu(IMenu menu, MenuInflater inflater)
+		{
+			//inflater.Inflate(Resource.Menu.home, menu);
+			base.OnCreateOptionsMenu(menu, inflater);
+		}
+
 	}
 }

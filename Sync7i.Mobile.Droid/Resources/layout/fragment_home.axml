@@ -5,13 +5,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <include
+        android:id="@+id/toolbartop"
         layout="@layout/toolbar_actionbar" />
     <include
+        android:id="@+id/networkalert"
         layout="@layout/network_alert" />
     <Mvx.MvxListView
+        android:id="@+id/lstcontent"
         android:layout_marginTop="?attr/actionBarSize"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         local:MvxItemTemplate="@layout/home_item"
         local:MvxBind="ItemsSource ListItem" />
+    <include
+        android:layout_above="@+id/lstcontent"
+        layout="@layout/toolbar_bottombar" />
 </RelativeLayout>

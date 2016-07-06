@@ -3,11 +3,10 @@ using Android.OS;
 using Android.Views;
 using MvvmCross.Droid.Shared.Attributes;
 using Sync7i.Mobile.Share;
-using System;
 
 namespace Sync7i.Mobile.Droid.Fragments
 {
-    [MvxFragment(typeof(MainViewModel), Resource.Id.content_frame)]
+	[MvxFragment(typeof(MainViewModel), Resource.Id.content_frame)]
     [Register("sync7i.mobile.droid.fragments.HomeFragment")]
 	public class HomeFragment : BaseNestedView<OverviewViewModel>
     {

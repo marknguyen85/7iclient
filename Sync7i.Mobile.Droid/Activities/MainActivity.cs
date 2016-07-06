@@ -4,6 +4,7 @@ using Android.Content.PM;
 using Android.OS;
 using Android.Support.V4.View;
 using Android.Support.V4.Widget;
+using Android.Support.V7.Widget;
 using Android.Views;
 using Android.Views.InputMethods;
 using Android.Widget;
@@ -21,7 +22,9 @@ namespace Sync7i.Mobile.Droid.Activities
     )]
     public class MainActivity : BaseHostedView<MainViewModel>
     {
-        public DrawerLayout DrawerLayout;
+		public int CurFragmentId;
+
+		public DrawerLayout DrawerLayout;
 
 		static int TIME_INTERVAL = 2; // # milliseconds, desired time passed between two back presses.
 		DateTime mBackPressed = DateTime.MinValue;
@@ -60,12 +63,32 @@ namespace Sync7i.Mobile.Droid.Activities
 			mBackPressed = DateTime.Now;
 		}
 
-        public override bool OnOptionsItemSelected(IMenuItem item)
+
+		/// <Docs>The options menu in which you place your items.</Docs>
+		/// <returns>To be added.</returns>
+		/// <summary>
+		/// This is the menu for the Toolbar/Action Bar to use
+		/// </summary>
+		/// <param name="menu">Menu.</param>
+		public override bool OnCreateOptionsMenu(IMenu menu)
+		{
+			switch (CurFragmentId)
+			{
+				case Resource.Layout.fragment_home:
+					MenuInflater.Inflate(Resource.Menu.home, menu);
+					break;
+				default:
+					break;
+			}
+			return base.OnCreateOptionsMenu(menu);
+		}
+
+		public override bool OnOptionsItemSelected(IMenuItem item)
         {
-            switch (item.ItemId)
+			switch (item.ItemId)
             {
                 case Android.Resource.Id.Home:
-                    DrawerLayout.OpenDrawer(GravityCompat.Start);
+					OpenDrawer();
                     return true;
             }
 
@@ -90,6 +113,10 @@ namespace Sync7i.Mobile.Droid.Activities
             DrawerLayout.SetDrawerLockMode(DrawerLayout.LockModeUnlocked);
         }
 
+		public void OpenDrawer() {
+			DrawerLayout.OpenDrawer(GravityCompat.Start);
+		}
+
 		public void HideSoftKeyboard()
 		{
 			if (CurrentFocus == null) return;
@@ -99,5 +126,6 @@ namespace Sync7i.Mobile.Droid.Activities
 
 			CurrentFocus.ClearFocus();
 		}
-    }
+
+}
 }

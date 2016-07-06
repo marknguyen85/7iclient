@@ -1985,19 +1985,40 @@ namespace Sync7i.Mobile.Droid
 			public const int design_snackbar_background = 2130837580;
 			
 			// aapt resource value: 0x7f02004d
-			public const int ico_user = 2130837581;
+			public const int ic_action_content_create = 2130837581;
 			
 			// aapt resource value: 0x7f02004e
-			public const int Icon = 2130837582;
+			public const int ic_action_content_redo = 2130837582;
 			
 			// aapt resource value: 0x7f02004f
-			public const int Logo = 2130837583;
+			public const int ic_action_content_save = 2130837583;
 			
 			// aapt resource value: 0x7f020050
-			public const int MvvmCrossLogo = 2130837584;
+			public const int ic_action_content_undo = 2130837584;
 			
 			// aapt resource value: 0x7f020051
-			public const int notification_template_icon_bg = 2130837585;
+			public const int ic_action_social_share = 2130837585;
+			
+			// aapt resource value: 0x7f020052
+			public const int ic_left_icon = 2130837586;
+			
+			// aapt resource value: 0x7f020053
+			public const int ic_right_icon = 2130837587;
+			
+			// aapt resource value: 0x7f020054
+			public const int ico_user = 2130837588;
+			
+			// aapt resource value: 0x7f020055
+			public const int Icon = 2130837589;
+			
+			// aapt resource value: 0x7f020056
+			public const int Logo = 2130837590;
+			
+			// aapt resource value: 0x7f020057
+			public const int MvvmCrossLogo = 2130837591;
+			
+			// aapt resource value: 0x7f020058
+			public const int notification_template_icon_bg = 2130837592;
 			
 			static Drawable()
 			{
@@ -2015,14 +2036,14 @@ namespace Sync7i.Mobile.Droid
 			// aapt resource value: 0x7f0b0070
 			public const int BtnLogin = 2131427440;
 			
-			// aapt resource value: 0x7f0b0084
-			public const int Image = 2131427460;
+			// aapt resource value: 0x7f0b0088
+			public const int Image = 2131427464;
 			
-			// aapt resource value: 0x7f0b0098
-			public const int ImageLoading = 2131427480;
+			// aapt resource value: 0x7f0b009b
+			public const int ImageLoading = 2131427483;
 			
-			// aapt resource value: 0x7f0b0085
-			public const int MainText = 2131427461;
+			// aapt resource value: 0x7f0b0089
+			public const int MainText = 2131427465;
 			
 			// aapt resource value: 0x7f0b000b
 			public const int MvvmCrossTagId = 2131427339;
@@ -2030,8 +2051,8 @@ namespace Sync7i.Mobile.Droid
 			// aapt resource value: 0x7f0b000c
 			public const int MvxBindingTagUnique = 2131427340;
 			
-			// aapt resource value: 0x7f0b0086
-			public const int SubText = 2131427462;
+			// aapt resource value: 0x7f0b008a
+			public const int SubText = 2131427466;
 			
 			// aapt resource value: 0x7f0b006e
 			public const int TbxPassword = 2131427438;
@@ -2039,14 +2060,14 @@ namespace Sync7i.Mobile.Droid
 			// aapt resource value: 0x7f0b006d
 			public const int TbxUsername = 2131427437;
 			
-			// aapt resource value: 0x7f0b007f
-			public const int Text = 2131427455;
-			
 			// aapt resource value: 0x7f0b0082
-			public const int Text1 = 2131427458;
+			public const int Text = 2131427458;
 			
-			// aapt resource value: 0x7f0b008b
-			public const int action0 = 2131427467;
+			// aapt resource value: 0x7f0b0086
+			public const int Text1 = 2131427462;
+			
+			// aapt resource value: 0x7f0b008e
+			public const int action0 = 2131427470;
 			
 			// aapt resource value: 0x7f0b005c
 			public const int action_bar = 2131427420;
@@ -2072,8 +2093,8 @@ namespace Sync7i.Mobile.Droid
 			// aapt resource value: 0x7f0b005d
 			public const int action_context_bar = 2131427421;
 			
-			// aapt resource value: 0x7f0b008f
-			public const int action_divider = 2131427471;
+			// aapt resource value: 0x7f0b0092
+			public const int action_divider = 2131427474;
 			
 			// aapt resource value: 0x7f0b0002
 			public const int action_menu_divider = 2131427330;
@@ -2099,8 +2120,8 @@ namespace Sync7i.Mobile.Droid
 			// aapt resource value: 0x7f0b0020
 			public const int always = 2131427360;
 			
-			// aapt resource value: 0x7f0b0080
-			public const int appbar = 2131427456;
+			// aapt resource value: 0x7f0b0084
+			public const int appbar = 2131427460;
 			
 			// aapt resource value: 0x7f0b001d
 			public const int beginning = 2131427357;
@@ -2108,11 +2129,20 @@ namespace Sync7i.Mobile.Droid
 			// aapt resource value: 0x7f0b002c
 			public const int bottom = 2131427372;
 			
+			// aapt resource value: 0x7f0b009c
+			public const int bottombar = 2131427484;
+			
+			// aapt resource value: 0x7f0b009e
+			public const int btn_next = 2131427486;
+			
+			// aapt resource value: 0x7f0b009d
+			public const int btn_prev = 2131427485;
+			
 			// aapt resource value: 0x7f0b0046
 			public const int buttonPanel = 2131427398;
 			
-			// aapt resource value: 0x7f0b008c
-			public const int cancel_action = 2131427468;
+			// aapt resource value: 0x7f0b008f
+			public const int cancel_action = 2131427471;
 			
 			// aapt resource value: 0x7f0b002d
 			public const int center = 2131427373;
@@ -2126,8 +2156,8 @@ namespace Sync7i.Mobile.Droid
 			// aapt resource value: 0x7f0b0054
 			public const int checkbox = 2131427412;
 			
-			// aapt resource value: 0x7f0b0092
-			public const int chronometer = 2131427474;
+			// aapt resource value: 0x7f0b0095
+			public const int chronometer = 2131427477;
 			
 			// aapt resource value: 0x7f0b0035
 			public const int clip_horizontal = 2131427381;
@@ -2183,8 +2213,8 @@ namespace Sync7i.Mobile.Droid
 			// aapt resource value: 0x7f0b001e
 			public const int end = 2131427358;
 			
-			// aapt resource value: 0x7f0b0097
-			public const int end_padder = 2131427479;
+			// aapt resource value: 0x7f0b009a
+			public const int end_padder = 2131427482;
 			
 			// aapt resource value: 0x7f0b0025
 			public const int enterAlways = 2131427365;
@@ -2231,8 +2261,8 @@ namespace Sync7i.Mobile.Droid
 			// aapt resource value: 0x7f0b006b
 			public const int imageView = 2131427435;
 			
-			// aapt resource value: 0x7f0b0096
-			public const int info = 2131427478;
+			// aapt resource value: 0x7f0b0099
+			public const int info = 2131427481;
 			
 			// aapt resource value: 0x7f0b000a
 			public const int item_touch_helper_previous_elevation = 2131427338;
@@ -2240,14 +2270,14 @@ namespace Sync7i.Mobile.Droid
 			// aapt resource value: 0x7f0b0031
 			public const int left = 2131427377;
 			
-			// aapt resource value: 0x7f0b0090
-			public const int line1 = 2131427472;
+			// aapt resource value: 0x7f0b0093
+			public const int line1 = 2131427475;
 			
-			// aapt resource value: 0x7f0b0094
-			public const int line3 = 2131427476;
+			// aapt resource value: 0x7f0b0097
+			public const int line3 = 2131427479;
 			
-			// aapt resource value: 0x7f0b0087
-			public const int linearlayout2 = 2131427463;
+			// aapt resource value: 0x7f0b008b
+			public const int linearlayout2 = 2131427467;
 			
 			// aapt resource value: 0x7f0b000d
 			public const int listMode = 2131427341;
@@ -2255,14 +2285,26 @@ namespace Sync7i.Mobile.Droid
 			// aapt resource value: 0x7f0b0043
 			public const int list_item = 2131427395;
 			
+			// aapt resource value: 0x7f0b0081
+			public const int lstcontent = 2131427457;
+			
 			// aapt resource value: 0x7f0b007e
 			public const int main_content = 2131427454;
 			
 			// aapt resource value: 0x7f0b0072
 			public const int main_frame = 2131427442;
 			
-			// aapt resource value: 0x7f0b008e
-			public const int media_actions = 2131427470;
+			// aapt resource value: 0x7f0b0091
+			public const int media_actions = 2131427473;
+			
+			// aapt resource value: 0x7f0b009f
+			public const int menu_daylyview = 2131427487;
+			
+			// aapt resource value: 0x7f0b00a1
+			public const int menu_monthlyview = 2131427489;
+			
+			// aapt resource value: 0x7f0b00a0
+			public const int menu_weeklyview = 2131427488;
 			
 			// aapt resource value: 0x7f0b001f
 			public const int middle = 2131427359;
@@ -2273,32 +2315,32 @@ namespace Sync7i.Mobile.Droid
 			// aapt resource value: 0x7f0b0018
 			public const int multiply = 2131427352;
 			
-			// aapt resource value: 0x7f0b009e
-			public const int nav_congno = 2131427486;
+			// aapt resource value: 0x7f0b00a7
+			public const int nav_congno = 2131427495;
 			
-			// aapt resource value: 0x7f0b009d
-			public const int nav_cuahang = 2131427485;
+			// aapt resource value: 0x7f0b00a6
+			public const int nav_cuahang = 2131427494;
 			
-			// aapt resource value: 0x7f0b00a0
-			public const int nav_footer = 2131427488;
+			// aapt resource value: 0x7f0b00a9
+			public const int nav_footer = 2131427497;
 			
-			// aapt resource value: 0x7f0b009b
-			public const int nav_func = 2131427483;
+			// aapt resource value: 0x7f0b00a4
+			public const int nav_func = 2131427492;
 			
-			// aapt resource value: 0x7f0b009c
-			public const int nav_giamsat = 2131427484;
+			// aapt resource value: 0x7f0b00a5
+			public const int nav_giamsat = 2131427493;
 			
-			// aapt resource value: 0x7f0b009a
-			public const int nav_home = 2131427482;
+			// aapt resource value: 0x7f0b00a3
+			public const int nav_home = 2131427491;
 			
-			// aapt resource value: 0x7f0b0099
-			public const int nav_items = 2131427481;
+			// aapt resource value: 0x7f0b00a2
+			public const int nav_items = 2131427490;
 			
-			// aapt resource value: 0x7f0b009f
-			public const int nav_kehoach = 2131427487;
+			// aapt resource value: 0x7f0b00a8
+			public const int nav_kehoach = 2131427496;
 			
-			// aapt resource value: 0x7f0b00a1
-			public const int nav_settings = 2131427489;
+			// aapt resource value: 0x7f0b00aa
+			public const int nav_settings = 2131427498;
 			
 			// aapt resource value: 0x7f0b0074
 			public const int navigation_frame = 2131427444;
@@ -2306,14 +2348,14 @@ namespace Sync7i.Mobile.Droid
 			// aapt resource value: 0x7f0b0079
 			public const int navigation_header_container = 2131427449;
 			
-			// aapt resource value: 0x7f0b0083
-			public const int navigation_view = 2131427459;
+			// aapt resource value: 0x7f0b0087
+			public const int navigation_view = 2131427463;
 			
-			// aapt resource value: 0x7f0b0089
-			public const int networkalert = 2131427465;
+			// aapt resource value: 0x7f0b0080
+			public const int networkalert = 2131427456;
 			
-			// aapt resource value: 0x7f0b008a
-			public const int networkalerttext = 2131427466;
+			// aapt resource value: 0x7f0b008d
+			public const int networkalerttext = 2131427469;
 			
 			// aapt resource value: 0x7f0b0023
 			public const int never = 2131427363;
@@ -2438,8 +2480,8 @@ namespace Sync7i.Mobile.Droid
 			// aapt resource value: 0x7f0b0033
 			public const int start = 2131427379;
 			
-			// aapt resource value: 0x7f0b008d
-			public const int status_bar_latest_event_content = 2131427469;
+			// aapt resource value: 0x7f0b0090
+			public const int status_bar_latest_event_content = 2131427472;
 			
 			// aapt resource value: 0x7f0b0067
 			public const int submit_area = 2131427431;
@@ -2447,11 +2489,11 @@ namespace Sync7i.Mobile.Droid
 			// aapt resource value: 0x7f0b000f
 			public const int tabMode = 2131427343;
 			
-			// aapt resource value: 0x7f0b0095
-			public const int text = 2131427477;
+			// aapt resource value: 0x7f0b0098
+			public const int text = 2131427480;
 			
-			// aapt resource value: 0x7f0b0093
-			public const int text2 = 2131427475;
+			// aapt resource value: 0x7f0b0096
+			public const int text2 = 2131427478;
 			
 			// aapt resource value: 0x7f0b004f
 			public const int textSpacerNoButtons = 2131427407;
@@ -2459,8 +2501,8 @@ namespace Sync7i.Mobile.Droid
 			// aapt resource value: 0x7f0b006c
 			public const int textView1 = 2131427436;
 			
-			// aapt resource value: 0x7f0b0091
-			public const int time = 2131427473;
+			// aapt resource value: 0x7f0b0094
+			public const int time = 2131427476;
 			
 			// aapt resource value: 0x7f0b0045
 			public const int title = 2131427397;
@@ -2468,8 +2510,14 @@ namespace Sync7i.Mobile.Droid
 			// aapt resource value: 0x7f0b004a
 			public const int title_template = 2131427402;
 			
-			// aapt resource value: 0x7f0b0081
-			public const int toolbar = 2131427457;
+			// aapt resource value: 0x7f0b0085
+			public const int toolbar = 2131427461;
+			
+			// aapt resource value: 0x7f0b0083
+			public const int toolbar_bottom = 2131427459;
+			
+			// aapt resource value: 0x7f0b007f
+			public const int toolbartop = 2131427455;
 			
 			// aapt resource value: 0x7f0b0034
 			public const int top = 2131427380;
@@ -2480,8 +2528,8 @@ namespace Sync7i.Mobile.Droid
 			// aapt resource value: 0x7f0b0075
 			public const int touch_outside = 2131427445;
 			
-			// aapt resource value: 0x7f0b0088
-			public const int txtUsername = 2131427464;
+			// aapt resource value: 0x7f0b008c
+			public const int txtUsername = 2131427468;
 			
 			// aapt resource value: 0x7f0b0008
 			public const int up = 2131427336;
@@ -2752,6 +2800,9 @@ namespace Sync7i.Mobile.Droid
 			// aapt resource value: 0x7f030044
 			public const int toolbar_actionbar = 2130903108;
 			
+			// aapt resource value: 0x7f030045
+			public const int toolbar_bottombar = 2130903109;
+			
 			static Layout()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
@@ -2766,7 +2817,13 @@ namespace Sync7i.Mobile.Droid
 		{
 			
 			// aapt resource value: 0x7f0c0000
-			public const int navigation_drawer = 2131492864;
+			public const int bottom = 2131492864;
+			
+			// aapt resource value: 0x7f0c0001
+			public const int home = 2131492865;
+			
+			// aapt resource value: 0x7f0c0002
+			public const int navigation_drawer = 2131492866;
 			
 			static Menu()
 			{
@@ -2856,6 +2913,9 @@ namespace Sync7i.Mobile.Droid
 			// aapt resource value: 0x7f050016
 			public const int character_counter_pattern = 2131034134;
 			
+			// aapt resource value: 0x7f05001d
+			public const int daylyview = 2131034141;
+			
 			// aapt resource value: 0x7f05001c
 			public const int drawer_close = 2131034140;
 			
@@ -2865,8 +2925,14 @@ namespace Sync7i.Mobile.Droid
 			// aapt resource value: 0x7f050019
 			public const int hello = 2131034137;
 			
+			// aapt resource value: 0x7f05001f
+			public const int monthlyview = 2131034143;
+			
 			// aapt resource value: 0x7f050013
 			public const int status_bar_notification_info_overflow = 2131034131;
+			
+			// aapt resource value: 0x7f05001e
+			public const int weeklyview = 2131034142;
 			
 			static String()
 			{

@@ -190,6 +190,37 @@
     <AndroidResource Include="Resources\layout\fragment_kehoach_ct.axml" />
     <AndroidResource Include="Resources\layout\fragment_kehoach_ct_item.axml" />
     <AndroidResource Include="Resources\layout\network_alert.axml" />
+    <AndroidResource Include="Resources\menu\home.xml" />
+    <AndroidResource Include="Resources\menu\bottom.xml" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_action_content_create.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_action_content_redo.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_action_content_save.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_action_content_undo.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_action_social_share.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_action_content_create.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_action_content_redo.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_action_content_save.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_action_content_undo.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_action_social_share.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_action_content_create.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_action_content_redo.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_action_content_save.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_action_content_undo.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_action_social_share.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_action_content_create.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_action_content_redo.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_action_content_save.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_action_content_undo.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_action_social_share.png" />
+    <AndroidResource Include="Resources\layout\toolbar_bottombar.axml" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_left_icon.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_right_icon.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_left_icon.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_right_icon.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_left_icon.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_right_icon.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_left_icon.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_right_icon.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -204,21 +235,12 @@
     <Folder Include="Fragments\CongNo\" />
     <Folder Include="Fragments\KeHoach\" />
     <Folder Include="Fragments\User\" />
+    <Folder Include="Resources\drawable-mdpi\" />
+    <Folder Include="Resources\drawable-hdpi\" />
+    <Folder Include="Resources\drawable-xhdpi\" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\MvvmCrossLogo.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable-hdpi\Icon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable-mdpi\Icon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable-xhdpi\Icon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable-xxhdpi\Icon.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable-xxxhdpi\Icon.png" />
