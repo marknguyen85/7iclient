@@ -17,13 +17,4 @@
             android:background="?attr/colorPrimary"
             local:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
     </android.support.design.widget.AppBarLayout>
-    <Mvx.MvxListView
-        android:id="@+id/lstcontent"
-        android:layout_width="fill_parent"
-        android:layout_height="0dp"
-        android:scaleType="centerCrop"
-        local:MvxItemTemplate="@layout/home_item" />
-    <include
-        android:layout_above="@+id/lstcontent"
-        layout="@layout/toolbar_bottombar" />
 </RelativeLayout>
