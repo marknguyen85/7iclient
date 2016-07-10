@@ -35,6 +35,14 @@ namespace Sync7i.Mobile.Droid.Fragments
 			}
 		}
 
+		protected override MvxFragment Fragment
+		{
+			get
+			{
+				return this;
+			}
+		}
+
 		public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
             base.OnCreateView(inflater, container, savedInstanceState);

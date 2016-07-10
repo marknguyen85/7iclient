@@ -38,5 +38,14 @@ namespace Sync7i.Mobile.Droid.Fragments
 				return "";
 			}
 		}
+
+		protected override MvxFragment Fragment
+		{
+			get
+			{
+				return this;
+			}
+		}
+
 	}
 }

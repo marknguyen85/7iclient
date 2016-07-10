@@ -221,6 +221,7 @@
     <AndroidResource Include="Resources\drawable-xhdpi\ic_right_icon.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\ic_left_icon.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\ic_right_icon.png" />
+    <AndroidResource Include="Resources\drawable\ic_check.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

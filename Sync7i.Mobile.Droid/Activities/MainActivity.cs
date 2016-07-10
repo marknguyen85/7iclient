@@ -9,6 +9,7 @@ using Android.Views;
 using Android.Views.InputMethods;
 using Android.Widget;
 using Java.Lang;
+using MvvmCross.Droid.Support.V4;
 using Sync7i.Mobile.Share;
 
 
@@ -23,6 +24,7 @@ namespace Sync7i.Mobile.Droid.Activities
     public class MainActivity : BaseHostedView<MainViewModel>
     {
 		public int CurFragmentId;
+		public MvxFragment CurFragment;
 
 		public DrawerLayout DrawerLayout;
 
@@ -58,7 +60,7 @@ namespace Sync7i.Mobile.Droid.Activities
 				if (DrawerLayout != null && DrawerLayout.IsDrawerOpen(GravityCompat.Start))
 					DrawerLayout.CloseDrawers();
 				else
-					Toast.MakeText(this.ApplicationContext, "Nhấn 2 lần để thoát ứng dụng", ToastLength.Short).Show(); 
+					Toast.MakeText(this.ApplicationContext, "@string/presstwoforexit", ToastLength.Short).Show(); 
 			}
 			mBackPressed = DateTime.Now;
 		}
@@ -77,6 +79,9 @@ namespace Sync7i.Mobile.Droid.Activities
 				case Resource.Layout.fragment_home:
 					MenuInflater.Inflate(Resource.Menu.home, menu);
 					break;
+				case Resource.Layout.fragment_settings:
+					//MenuInflater.Inflate(Resource.Menu.home, menu);
+					break;
 				default:
 					break;
 			}
@@ -85,13 +90,11 @@ namespace Sync7i.Mobile.Droid.Activities
 
 		public override bool OnOptionsItemSelected(IMenuItem item)
         {
-			switch (item.ItemId)
-            {
-                case Android.Resource.Id.Home:
-					OpenDrawer();
-                    return true;
-            }
-
+			if (CurFragment != null)
+			{
+				return CurFragment.OnOptionsItemSelected(item);
+			}
+				
             return base.OnOptionsItemSelected(item);
         }
 

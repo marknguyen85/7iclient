@@ -2,15 +2,23 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
 	xmlns:app="http://schemas.android.com/apk/res-auto">
  	<item
-      android:id="@+id/menu_daylyview"
-      app:showAsAction="never"
-      android:title="@string/daylyview" /> 
+		android:id="@+id/menu_daylyview"
+		app:showAsAction="never"
+		android:title="@string/daylyview" /> 
 	<item
-      android:id="@+id/menu_weeklyview"
-      app:showAsAction="never"
-      android:title="@string/weeklyview" />
+		android:id="@+id/menu_weeklyview"
+		app:showAsAction="never"
+		android:title="@string/weeklyview" />
 	<item
-      android:id="@+id/menu_monthlyview"
-      app:showAsAction="never"
-      android:title="@string/monthlyview" />
+		android:id="@+id/menu_monthlyview"
+		app:showAsAction="never"
+		android:title="@string/monthlyview" />
+	<item
+		android:id="@+id/menu_optionview"
+		app:showAsAction="never"
+		android:title="@string/optionview" />
+	<item
+		android:id="@+id/menu_homeview"
+		app:showAsAction="never"
+		android:title="@string/homeview" />
 </menu>

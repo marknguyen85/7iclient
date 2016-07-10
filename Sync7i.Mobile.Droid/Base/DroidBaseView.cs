@@ -191,26 +191,30 @@ namespace Sync7i.Mobile.Droid
 
 		protected abstract int FragmentId { get; }
 
+		protected abstract MvxFragment Fragment { get; }
+
 		void SettingTopBar(View view)
 		{
 			_toolbar = view.FindViewById<Toolbar>(Resource.Id.toolbar);
 			if (_toolbar != null)
 			{
+				var mainActivity = (MainActivity)Activity;
 				//set title of 
 				if (!string.IsNullOrEmpty(FragmentName))
 				{
 					_toolbar.Title = FragmentName;
 				}
 				//assign current fragment
-				((MainActivity)Activity).CurFragmentId = FragmentId;
-				((MainActivity)Activity).SetSupportActionBar(_toolbar);
+				mainActivity.CurFragmentId = FragmentId;
+				mainActivity.CurFragment = Fragment;
+				mainActivity.SetSupportActionBar(_toolbar);
 				if (showHamburgerMenu)
 				{
-					((MainActivity)Activity).SupportActionBar.SetDisplayHomeAsUpEnabled(true);
+					mainActivity.SupportActionBar.SetDisplayHomeAsUpEnabled(true);
 
 					_drawerToggle = new MvxActionBarDrawerToggle(
 						Activity,                               // host Activity
-						((MainActivity)Activity).DrawerLayout,  // DrawerLayout object
+						mainActivity.DrawerLayout,  // DrawerLayout object
 						_toolbar,                               // nav drawer icon to replace 'Up' caret
 						Resource.String.drawer_open,            // "open drawer" description
 						Resource.String.drawer_close            // "close drawer" description
@@ -219,10 +223,10 @@ namespace Sync7i.Mobile.Droid
 					_drawerToggle.DrawerOpened += (object sender, ActionBarDrawerEventArgs e) =>
 					{
 						if (Activity != null)
-							((MainActivity)Activity).HideSoftKeyboard();
+							mainActivity.HideSoftKeyboard();
 					};
 
-					((MainActivity)Activity).DrawerLayout.AddDrawerListener(_drawerToggle);
+					mainActivity.DrawerLayout.AddDrawerListener(_drawerToggle);
 				}
 			}
 		}

@@ -11,6 +11,7 @@ namespace Sync7i.Mobile.Droid.Activities
         Label = "Đăng nhập",
         Theme = "@style/AppTheme.Login",
         LaunchMode = LaunchMode.SingleTop,
+		NoHistory = true,
         ConfigurationChanges = ConfigChanges.Orientation | ConfigChanges.ScreenSize,
         Name = "sync7i.mobile.droid.activities.LoginActivity"
     )]			

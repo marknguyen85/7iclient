@@ -4,6 +4,7 @@ using Android.OS;
 using MvvmCross.Droid.Shared.Attributes;
 using Sync7i.Mobile.Share;
 using System;
+using MvvmCross.Droid.Support.V4;
 
 namespace Sync7i.Mobile.Droid.Fragments
 {
@@ -32,5 +33,13 @@ namespace Sync7i.Mobile.Droid.Fragments
 				return "";
 			}
 		}
+		protected override MvxFragment Fragment
+		{
+			get
+			{
+				return this;
+			}
+		}
+
 	}
 }

@@ -2000,25 +2000,28 @@ namespace Sync7i.Mobile.Droid
 			public const int ic_action_social_share = 2130837585;
 			
 			// aapt resource value: 0x7f020052
-			public const int ic_left_icon = 2130837586;
+			public const int ic_check = 2130837586;
 			
 			// aapt resource value: 0x7f020053
-			public const int ic_right_icon = 2130837587;
+			public const int ic_left_icon = 2130837587;
 			
 			// aapt resource value: 0x7f020054
-			public const int ico_user = 2130837588;
+			public const int ic_right_icon = 2130837588;
 			
 			// aapt resource value: 0x7f020055
-			public const int Icon = 2130837589;
+			public const int ico_user = 2130837589;
 			
 			// aapt resource value: 0x7f020056
-			public const int Logo = 2130837590;
+			public const int Icon = 2130837590;
 			
 			// aapt resource value: 0x7f020057
-			public const int MvvmCrossLogo = 2130837591;
+			public const int Logo = 2130837591;
 			
 			// aapt resource value: 0x7f020058
-			public const int notification_template_icon_bg = 2130837592;
+			public const int MvvmCrossLogo = 2130837592;
+			
+			// aapt resource value: 0x7f020059
+			public const int notification_template_icon_bg = 2130837593;
 			
 			static Drawable()
 			{
@@ -2300,8 +2303,14 @@ namespace Sync7i.Mobile.Droid
 			// aapt resource value: 0x7f0b009f
 			public const int menu_daylyview = 2131427487;
 			
+			// aapt resource value: 0x7f0b00a3
+			public const int menu_homeview = 2131427491;
+			
 			// aapt resource value: 0x7f0b00a1
 			public const int menu_monthlyview = 2131427489;
+			
+			// aapt resource value: 0x7f0b00a2
+			public const int menu_optionview = 2131427490;
 			
 			// aapt resource value: 0x7f0b00a0
 			public const int menu_weeklyview = 2131427488;
@@ -2315,32 +2324,32 @@ namespace Sync7i.Mobile.Droid
 			// aapt resource value: 0x7f0b0018
 			public const int multiply = 2131427352;
 			
-			// aapt resource value: 0x7f0b00a7
-			public const int nav_congno = 2131427495;
-			
-			// aapt resource value: 0x7f0b00a6
-			public const int nav_cuahang = 2131427494;
-			
 			// aapt resource value: 0x7f0b00a9
-			public const int nav_footer = 2131427497;
-			
-			// aapt resource value: 0x7f0b00a4
-			public const int nav_func = 2131427492;
-			
-			// aapt resource value: 0x7f0b00a5
-			public const int nav_giamsat = 2131427493;
-			
-			// aapt resource value: 0x7f0b00a3
-			public const int nav_home = 2131427491;
-			
-			// aapt resource value: 0x7f0b00a2
-			public const int nav_items = 2131427490;
+			public const int nav_congno = 2131427497;
 			
 			// aapt resource value: 0x7f0b00a8
-			public const int nav_kehoach = 2131427496;
+			public const int nav_cuahang = 2131427496;
+			
+			// aapt resource value: 0x7f0b00ab
+			public const int nav_footer = 2131427499;
+			
+			// aapt resource value: 0x7f0b00a6
+			public const int nav_func = 2131427494;
+			
+			// aapt resource value: 0x7f0b00a7
+			public const int nav_giamsat = 2131427495;
+			
+			// aapt resource value: 0x7f0b00a5
+			public const int nav_home = 2131427493;
+			
+			// aapt resource value: 0x7f0b00a4
+			public const int nav_items = 2131427492;
 			
 			// aapt resource value: 0x7f0b00aa
-			public const int nav_settings = 2131427498;
+			public const int nav_kehoach = 2131427498;
+			
+			// aapt resource value: 0x7f0b00ac
+			public const int nav_settings = 2131427500;
 			
 			// aapt resource value: 0x7f0b0074
 			public const int navigation_frame = 2131427444;
@@ -2925,8 +2934,17 @@ namespace Sync7i.Mobile.Droid
 			// aapt resource value: 0x7f050019
 			public const int hello = 2131034137;
 			
+			// aapt resource value: 0x7f050021
+			public const int homeview = 2131034145;
+			
 			// aapt resource value: 0x7f05001f
 			public const int monthlyview = 2131034143;
+			
+			// aapt resource value: 0x7f050020
+			public const int optionview = 2131034144;
+			
+			// aapt resource value: 0x7f050022
+			public const int presstwoforexit = 2131034146;
 			
 			// aapt resource value: 0x7f050013
 			public const int status_bar_notification_info_overflow = 2131034131;

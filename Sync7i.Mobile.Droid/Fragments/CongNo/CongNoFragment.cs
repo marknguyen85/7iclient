@@ -3,6 +3,7 @@ using Android.Views;
 using Android.OS;
 using MvvmCross.Droid.Shared.Attributes;
 using Sync7i.Mobile.Share;
+using MvvmCross.Droid.Support.V4;
 
 namespace Sync7i.Mobile.Droid.Fragments
 {
@@ -31,5 +32,13 @@ namespace Sync7i.Mobile.Droid.Fragments
 				return Resource.Layout.fragment_congno;
             }
         }
-    }
+		protected override MvxFragment Fragment
+		{
+			get
+			{
+				return this;
+			}
+		}
+
+	}
 }
